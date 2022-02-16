@@ -1,0 +1,1 @@
+export { NamedComponent } from "./NamedComponent";

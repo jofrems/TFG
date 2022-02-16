@@ -1,0 +1,89 @@
+{
+  "playing-game": [
+    {
+      "method": "POST",
+      "url": "/api/v1/players/login",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"4f6ea736-4125-42dc-9c24-517d6f7460d3\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/games/byJoined",
+      "requestBody": "{\n  \"token\": \"4f6ea736-4125-42dc-9c24-517d6f7460d3\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"leonard\",\n      \"gameName\": \"mygame\",\n      \"joinedPlayerNames\": [\n        \"leonard\"\n      ]\n    }\n  ]\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#listGamesByJoined(ListGamesByJoinedForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/mygame/by/leonard?token\u003d4f6ea736-4125-42dc-9c24-517d6f7460d3",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"mygame\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4f6ea736-4125-42dc-9c24-517d6f7460d3\",\n  \"entities\": {\n    \"ciutat-27\": {\n      \"id\": \"ciutat-27\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"vaixell-27\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-27\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 0,\n      \"name\": \"Beagle\",\n      \"owner\": \"leonard\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    }
+  ],
+  "validations": [
+    {
+      "method": "POST",
+      "url": "/api/v1/players/login",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"f4f0346a-3150-4c43-8a7e-39a380e7d373\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/games/byPlayer",
+      "requestBody": "{\n  \"playerName\": \"penny\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"penny\",\n      \"gameName\": \"alone\",\n      \"joinedPlayerNames\": [\n        \"penny\"\n      ]\n    }\n  ]\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#listGamesByCreator(ListGamesByCreatorForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/alone/by/penny?token\u003df4f0346a-3150-4c43-8a7e-39a380e7d373",
+      "requestBody": "null",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"You should play only games in which you are joined\"\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "You should play only games in which you are joined\njava.io.PrintWriter@1ff0a397"
+    }
+  ],
+  "play-your-friends-game": [
+    {
+      "method": "POST",
+      "url": "/api/v1/players/login",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"c73595ab-d756-44cf-a404-47d565e56124\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/games/byJoined",
+      "requestBody": "{\n  \"token\": \"c73595ab-d756-44cf-a404-47d565e56124\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"penny\",\n      \"gameName\": \"together\",\n      \"joinedPlayerNames\": [\n        \"penny\",\n        \"leonard\"\n      ]\n    }\n  ]\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#listGamesByJoined(ListGamesByJoinedForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/penny?token\u003dc73595ab-d756-44cf-a404-47d565e56124",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"penny\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"c73595ab-d756-44cf-a404-47d565e56124\",\n  \"entities\": {\n    \"ciutat-29\": {\n      \"id\": \"ciutat-29\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"penny\",\n      \"type\": \"city\"\n    },\n    \"ciutat-30\": {\n      \"id\": \"ciutat-30\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 5,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"vaixell-30\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-30\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 5,\n      \"name\": \"Beagle\",\n      \"owner\": \"leonard\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    }
+  ]
+}

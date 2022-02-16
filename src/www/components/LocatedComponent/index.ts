@@ -1,0 +1,1 @@
+export { LocatedComponent } from "./LocatedComponent";

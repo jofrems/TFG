@@ -1,0 +1,123 @@
+{
+  "playing-game": [
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d6720046f-7823-4da1-8df7-e3089a221c1c",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"6720046f-7823-4da1-8df7-e3089a221c1c\",\n  \"entities\": {\n    \"ciutat-4\": {\n      \"id\": \"ciutat-4\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"vaixell-4\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-4\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 0,\n      \"name\": \"Beagle\",\n      \"owner\": \"leonard\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/games/joinNext?token\u003d6720046f-7823-4da1-8df7-e3089a221c1c",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"penny\",\n  \"creatorName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"bec6a521-a40b-4942-ad32-9da6696f77c9\",\n  \"entities\": {\n    \"ciutat-4\": {\n      \"id\": \"ciutat-4\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"type\": \"city\"\n    },\n    \"ciutat-5\": {\n      \"id\": \"ciutat-5\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 5,\n      \"name\": \"Capital\",\n      \"owner\": \"penny\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"vaixell-5\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-5\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 5,\n      \"name\": \"Beagle\",\n      \"owner\": \"penny\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d6720046f-7823-4da1-8df7-e3089a221c1c",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"6720046f-7823-4da1-8df7-e3089a221c1c\",\n  \"entities\": {\n    \"ciutat-4\": {\n      \"id\": \"ciutat-4\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"ciutat-5\": {\n      \"id\": \"ciutat-5\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 5,\n      \"name\": \"Capital\",\n      \"owner\": \"penny\",\n      \"type\": \"city\"\n    },\n    \"vaixell-4\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-4\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 0,\n      \"name\": \"Beagle\",\n      \"owner\": \"leonard\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/games/joinNext?token\u003d6720046f-7823-4da1-8df7-e3089a221c1c",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"sheldon\",\n  \"creatorName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"762401dc-b38b-4172-901a-cb198d35dd66\",\n  \"entities\": {\n    \"ciutat-4\": {\n      \"id\": \"ciutat-4\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"type\": \"city\"\n    },\n    \"ciutat-5\": {\n      \"id\": \"ciutat-5\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 5,\n      \"name\": \"Capital\",\n      \"owner\": \"penny\",\n      \"type\": \"city\"\n    },\n    \"ciutat-6\": {\n      \"id\": \"ciutat-6\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 10,\n      \"name\": \"Capital\",\n      \"owner\": \"sheldon\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"vaixell-6\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-6\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 10,\n      \"name\": \"Beagle\",\n      \"owner\": \"sheldon\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d6720046f-7823-4da1-8df7-e3089a221c1c",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"6720046f-7823-4da1-8df7-e3089a221c1c\",\n  \"entities\": {\n    \"ciutat-4\": {\n      \"id\": \"ciutat-4\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"ciutat-5\": {\n      \"id\": \"ciutat-5\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 5,\n      \"name\": \"Capital\",\n      \"owner\": \"penny\",\n      \"type\": \"city\"\n    },\n    \"ciutat-6\": {\n      \"id\": \"ciutat-6\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 10,\n      \"name\": \"Capital\",\n      \"owner\": \"sheldon\",\n      \"type\": \"city\"\n    },\n    \"vaixell-4\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-4\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 0,\n      \"name\": \"Beagle\",\n      \"owner\": \"leonard\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003dbec6a521-a40b-4942-ad32-9da6696f77c9",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"bec6a521-a40b-4942-ad32-9da6696f77c9\",\n  \"entities\": {\n    \"ciutat-4\": {\n      \"id\": \"ciutat-4\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"type\": \"city\"\n    },\n    \"ciutat-5\": {\n      \"id\": \"ciutat-5\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 5,\n      \"name\": \"Capital\",\n      \"owner\": \"penny\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"ciutat-6\": {\n      \"id\": \"ciutat-6\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 10,\n      \"name\": \"Capital\",\n      \"owner\": \"sheldon\",\n      \"type\": \"city\"\n    },\n    \"vaixell-5\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-5\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 5,\n      \"name\": \"Beagle\",\n      \"owner\": \"penny\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d762401dc-b38b-4172-901a-cb198d35dd66",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"762401dc-b38b-4172-901a-cb198d35dd66\",\n  \"entities\": {\n    \"ciutat-4\": {\n      \"id\": \"ciutat-4\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"type\": \"city\"\n    },\n    \"ciutat-5\": {\n      \"id\": \"ciutat-5\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 5,\n      \"name\": \"Capital\",\n      \"owner\": \"penny\",\n      \"type\": \"city\"\n    },\n    \"ciutat-6\": {\n      \"id\": \"ciutat-6\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 10,\n      \"name\": \"Capital\",\n      \"owner\": \"sheldon\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"vaixell-6\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-6\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 10,\n      \"name\": \"Beagle\",\n      \"owner\": \"sheldon\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d6720046f-7823-4da1-8df7-e3089a221c1c",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"6720046f-7823-4da1-8df7-e3089a221c1c\",\n  \"entities\": {\n    \"ciutat-4\": {\n      \"id\": \"ciutat-4\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"ciutat-5\": {\n      \"id\": \"ciutat-5\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 5,\n      \"name\": \"Capital\",\n      \"owner\": \"penny\",\n      \"type\": \"city\"\n    },\n    \"ciutat-6\": {\n      \"id\": \"ciutat-6\",\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"location\": 10,\n      \"name\": \"Capital\",\n      \"owner\": \"sheldon\",\n      \"type\": \"city\"\n    },\n    \"vaixell-4\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-4\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 0,\n      \"name\": \"Beagle\",\n      \"owner\": \"leonard\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    }
+  ],
+  "safe-for-humans": [
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d9a98758d-560f-488c-be99-0e5e64388067",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"9a98758d-560f-488c-be99-0e5e64388067\",\n  \"entities\": {\n    \"ciutat-7\": {\n      \"id\": \"ciutat-7\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"vaixell-7\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-7\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 0,\n      \"name\": \"Beagle\",\n      \"owner\": \"leonard\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/games/joinNext?token\u003d9a98758d-560f-488c-be99-0e5e64388067",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"howard\",\n  \"creatorName\": \"leonard\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@4cff38ff"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/games/joinNext?token\u003d9a98758d-560f-488c-be99-0e5e64388067",
+      "requestBody": "{\n  \"password\": \"wrongpassw0\",\n  \"gameName\": \"together\",\n  \"playerName\": \"penny\",\n  \"creatorName\": \"leonard\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@4607cbe2"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/games/joinNext?token\u003d9a98758d-560f-488c-be99-0e5e64388067",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"leonard\",\n  \"creatorName\": \"leonard\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"You should join games in which are you not joined\"\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@492a220e"
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d9a98758d-560f-488c-be99-0e5e64388067",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"9a98758d-560f-488c-be99-0e5e64388067\",\n  \"entities\": {\n    \"ciutat-7\": {\n      \"id\": \"ciutat-7\",\n      \"isDock\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isTyped\": true,\n      \"location\": 0,\n      \"name\": \"Capital\",\n      \"owner\": \"leonard\",\n      \"population\": 10,\n      \"type\": \"city\"\n    },\n    \"vaixell-7\": {\n      \"destinationLocation\": 0,\n      \"destinationSail\": false,\n      \"id\": \"vaixell-7\",\n      \"isLoadable\": true,\n      \"isLocated\": true,\n      \"isNamed\": true,\n      \"isOwned\": true,\n      \"isPopulated\": true,\n      \"isSail\": true,\n      \"isTyped\": true,\n      \"loadRequested\": false,\n      \"loadUnloadAmount\": 0,\n      \"location\": 0,\n      \"name\": \"Beagle\",\n      \"owner\": \"leonard\",\n      \"population\": 0,\n      \"type\": \"ship\",\n      \"unloadRequested\": false\n    }\n  }\n}",
+      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    }
+  ]
+}
