@@ -2,121 +2,121 @@
   "playing-game": [
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d81d18308-b5c7-435e-908f-89cd66e1e455",
+      "url": "/api/v1/games/together/by/leonard?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"81d18308-b5c7-435e-908f-89cd66e1e455\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4aa644d8-239c-4e14-88ad-0dff2954882c\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003d81d18308-b5c7-435e-908f-89cd66e1e455",
+      "url": "/api/v1/games/joinNext?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"penny\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"bde0ed94-b8ff-44e1-804b-cafe3f7235ab\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"e9101074-f9ff-496f-9655-ecaeda9b9673\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d81d18308-b5c7-435e-908f-89cd66e1e455",
+      "url": "/api/v1/games/together/by/leonard?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"81d18308-b5c7-435e-908f-89cd66e1e455\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4aa644d8-239c-4e14-88ad-0dff2954882c\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003d81d18308-b5c7-435e-908f-89cd66e1e455",
+      "url": "/api/v1/games/joinNext?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"sheldon\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"79da2e35-76f6-4d88-8acd-fe2d889edcb3\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"4a7832a2-57af-4bd6-b69d-59b12a45ba01\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d81d18308-b5c7-435e-908f-89cd66e1e455",
+      "url": "/api/v1/games/together/by/leonard?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"81d18308-b5c7-435e-908f-89cd66e1e455\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4aa644d8-239c-4e14-88ad-0dff2954882c\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003dbde0ed94-b8ff-44e1-804b-cafe3f7235ab",
+      "url": "/api/v1/games/together/by/leonard?token\u003de9101074-f9ff-496f-9655-ecaeda9b9673",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"bde0ed94-b8ff-44e1-804b-cafe3f7235ab\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"e9101074-f9ff-496f-9655-ecaeda9b9673\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d79da2e35-76f6-4d88-8acd-fe2d889edcb3",
+      "url": "/api/v1/games/together/by/leonard?token\u003d4a7832a2-57af-4bd6-b69d-59b12a45ba01",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"79da2e35-76f6-4d88-8acd-fe2d889edcb3\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"4a7832a2-57af-4bd6-b69d-59b12a45ba01\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d81d18308-b5c7-435e-908f-89cd66e1e455",
+      "url": "/api/v1/games/together/by/leonard?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"81d18308-b5c7-435e-908f-89cd66e1e455\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4aa644d8-239c-4e14-88ad-0dff2954882c\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }
   ],
   "safe-for-humans": [
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003dbe7d1918-c4c5-469a-87ab-d33124c62718",
+      "url": "/api/v1/games/together/by/leonard?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"be7d1918-c4c5-469a-87ab-d33124c62718\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"7e299a31-a16d-4c4c-a890-7dd2a7d7e518\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003dbe7d1918-c4c5-469a-87ab-d33124c62718",
+      "url": "/api/v1/games/joinNext?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"howard\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
-      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@7c206b14"
+      "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@58f290bc"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003dbe7d1918-c4c5-469a-87ab-d33124c62718",
+      "url": "/api/v1/games/joinNext?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
       "requestBody": "{\n  \"password\": \"wrongpassw0\",\n  \"gameName\": \"together\",\n  \"playerName\": \"penny\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
-      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@79d14037"
+      "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@1fa98a22"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003dbe7d1918-c4c5-469a-87ab-d33124c62718",
+      "url": "/api/v1/games/joinNext?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"leonard\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"You should join games in which are you not joined\"\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#joinNext(JoinNextForm)",
-      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@1c3d9e28"
+      "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
+      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@2976ef56"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003dbe7d1918-c4c5-469a-87ab-d33124c62718",
+      "url": "/api/v1/games/together/by/leonard?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"be7d1918-c4c5-469a-87ab-d33124c62718\",\n  \"entities\": {}\n}",
-      "handler": "com.drpicox.game.games.api.GamesApi#get(String, String, String)",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"7e299a31-a16d-4c4c-a890-7dd2a7d7e518\",\n  \"entities\": {}\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }
   ]

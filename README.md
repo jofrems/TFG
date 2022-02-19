@@ -53,7 +53,7 @@ Setup Javascript BackEnd:
 
 ## Develop Run
 
-- Run the com.drpicox.game.Application from intellij
+- Run the Application from intellij
   - use `-ea -client -Xverify:none -noverify` for faster test run
 - Run `yarn start` from command line
 - Open the browser in `http://localhost:3000`
