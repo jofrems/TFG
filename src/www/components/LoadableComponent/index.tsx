@@ -1,1 +1,0 @@
-export { LoadableComponent } from "./LoadableComponent";

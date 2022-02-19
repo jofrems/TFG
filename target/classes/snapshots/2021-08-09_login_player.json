@@ -14,7 +14,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"dfa1649c-7a9a-49f9-b8a8-ad7eaf709154\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"5dfe8e29-9750-4ddf-b23c-35ce43527dda\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     }
@@ -25,7 +25,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"cf1008c8-891c-4339-bdff-ac8aaa6e9a6f\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"346e1c65-ad58-4a6f-8d7a-dd6a24c16610\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -34,7 +34,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"payforyourmeal12\",\n  \"playerName\": \"penny\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"fe4291fa-cc08-4bc5-9230-88abd53d53b6\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"2ce797a4-dbc0-42af-aa09-dc444a65d736\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     }
@@ -47,7 +47,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
-      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@65ff5e07"
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@1c31de5d"
     },
     {
       "method": "POST",
@@ -56,7 +56,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
-      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@b97bc80"
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@1fc5c0b2"
     }
   ]
 }

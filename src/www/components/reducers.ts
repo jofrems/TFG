@@ -1,9 +1,7 @@
-import { componentLoadableReducer } from "./LoadableComponent/reducers";
-import { componentNamedReducer } from "./NamedComponent/reducers";
-import { componentSailReducer } from "./SailComponent/reducers";
+//import { componentLoadableReducer } from "./LoadableComponent/reducers";
+
 
 export const componentsReducers = {
-  componentLoadable: componentLoadableReducer,
-  componentNamed: componentNamedReducer,
-  componentSail: componentSailReducer,
+  //componentLoadable: componentLoadableReducer,
+
 };

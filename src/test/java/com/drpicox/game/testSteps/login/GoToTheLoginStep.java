@@ -1,9 +1,9 @@
 package com.drpicox.game.testSteps.login;
 
+import com.drpicox.game.testSteps.navigator.NavigatorTestView;
 import com.drpicox.game.testPost.reader.PostLine;
 import com.drpicox.game.testSteps.AbstractPostLineStep;
 
-import com.drpicox.game.testSteps.navigator.NavigatorTestView;
 import org.springframework.stereotype.Component;
 
 @Component

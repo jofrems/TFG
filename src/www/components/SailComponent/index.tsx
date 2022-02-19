@@ -1,1 +1,0 @@
-export { SailComponent } from "./SailComponent";

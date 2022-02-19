@@ -5,14 +5,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"a6b27a16-8834-4e48-8fad-09ef07ff5e24\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"7e5d44f9-5a53-4622-821e-8c327a722b17\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"a6b27a16-8834-4e48-8fad-09ef07ff5e24\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"7e5d44f9-5a53-4622-821e-8c327a722b17\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.drpicox.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -25,14 +25,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"39b43912-dea2-44d3-9ac9-f58d0c58963b\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"81b4288b-6e0c-492d-b20b-511cb9dc75d7\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"39b43912-dea2-44d3-9ac9-f58d0c58963b\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"81b4288b-6e0c-492d-b20b-511cb9dc75d7\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.drpicox.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -54,14 +54,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"1da7ea7b-6498-4e95-8cdf-757c8a06e9ce\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"9360ddac-9a10-451d-9861-4daba7a97600\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"1da7ea7b-6498-4e95-8cdf-757c8a06e9ce\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"9360ddac-9a10-451d-9861-4daba7a97600\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.drpicox.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -70,7 +70,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"secondgame\",\n  \"token\": \"1da7ea7b-6498-4e95-8cdf-757c8a06e9ce\"\n}",
+      "requestBody": "{\n  \"gameName\": \"secondgame\",\n  \"token\": \"9360ddac-9a10-451d-9861-4daba7a97600\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The secondgame game has been created successfully\"\n}",
       "handler": "com.drpicox.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -92,18 +92,18 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"a78aa7d8-8f46-46a8-ad1e-56e45b1f41db\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"fe29831c-d1f1-4bbc-9b64-4e092888a920\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"\",\n  \"token\": \"a78aa7d8-8f46-46a8-ad1e-56e45b1f41db\"\n}",
+      "requestBody": "{\n  \"gameName\": \"\",\n  \"token\": \"fe29831c-d1f1-4bbc-9b64-4e092888a920\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Game name should be present\"\n}",
       "handler": "com.drpicox.game.games.api.GamesApi#createGame(CreateGameForm)",
-      "resolvedException": "Game name should be present\njava.io.PrintWriter@ab8d6a6"
+      "resolvedException": "Game name should be present\njava.io.PrintWriter@540212be"
     },
     {
       "method": "POST",
@@ -117,7 +117,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"a78aa7d8-8f46-46a8-ad1e-56e45b1f41db\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"fe29831c-d1f1-4bbc-9b64-4e092888a920\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.drpicox.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -126,11 +126,11 @@
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"a78aa7d8-8f46-46a8-ad1e-56e45b1f41db\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"fe29831c-d1f1-4bbc-9b64-4e092888a920\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The mygame game already exists\"\n}",
       "handler": "com.drpicox.game.games.api.GamesApi#createGame(CreateGameForm)",
-      "resolvedException": "The mygame game already exists\njava.io.PrintWriter@765569a4"
+      "resolvedException": "The mygame game already exists\njava.io.PrintWriter@16ef1160"
     },
     {
       "method": "POST",
@@ -146,7 +146,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"penny\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"2c5c58fc-fc42-4e1b-8f16-9d0f2c6ee36e\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"3c71096d-caa0-4a78-b31c-e254f755a3d3\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
       "handler": "com.drpicox.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -162,7 +162,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"2c5c58fc-fc42-4e1b-8f16-9d0f2c6ee36e\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"3c71096d-caa0-4a78-b31c-e254f755a3d3\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.drpicox.game.games.api.GamesApi#createGame(CreateGameForm)",

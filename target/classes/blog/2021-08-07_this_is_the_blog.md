@@ -60,7 +60,7 @@ as posts in the blog section.
  <!-- SNAPSHOT status=200 -->
 
  * You should be at the blog screen.
- * You should see at least 10 posts.
+ * You should see at least 7 posts.
  * You should see the post "This is the blog".
  * The post "This is the blog" should be the last post.
 

@@ -1,1 +1,0 @@
-export { DockComponent } from "./DockComponent";
