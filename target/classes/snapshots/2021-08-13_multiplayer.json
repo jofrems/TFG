@@ -2,73 +2,73 @@
   "playing-game": [
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
+      "url": "/api/v1/games/together/by/leonard?token\u003deef28216-3afe-4827-a392-1e49fc8d19a2",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4aa644d8-239c-4e14-88ad-0dff2954882c\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"eef28216-3afe-4827-a392-1e49fc8d19a2\",\n  \"entities\": {\n    \"inventory-1\": {\n      \"id\": \"inventory-1\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
+      "url": "/api/v1/games/joinNext?token\u003deef28216-3afe-4827-a392-1e49fc8d19a2",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"penny\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"e9101074-f9ff-496f-9655-ecaeda9b9673\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"f3333e2d-25b3-4b24-ab3a-5c71643c22e0\",\n  \"entities\": {\n    \"inventory-2\": {\n      \"id\": \"inventory-2\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"penny\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
+      "url": "/api/v1/games/together/by/leonard?token\u003deef28216-3afe-4827-a392-1e49fc8d19a2",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4aa644d8-239c-4e14-88ad-0dff2954882c\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"eef28216-3afe-4827-a392-1e49fc8d19a2\",\n  \"entities\": {\n    \"inventory-1\": {\n      \"id\": \"inventory-1\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
+      "url": "/api/v1/games/joinNext?token\u003deef28216-3afe-4827-a392-1e49fc8d19a2",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"sheldon\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"4a7832a2-57af-4bd6-b69d-59b12a45ba01\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"2b788f28-f2c1-4d6d-9309-d0c7540ab757\",\n  \"entities\": {\n    \"inventory-3\": {\n      \"id\": \"inventory-3\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"sheldon\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
+      "url": "/api/v1/games/together/by/leonard?token\u003deef28216-3afe-4827-a392-1e49fc8d19a2",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4aa644d8-239c-4e14-88ad-0dff2954882c\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"eef28216-3afe-4827-a392-1e49fc8d19a2\",\n  \"entities\": {\n    \"inventory-1\": {\n      \"id\": \"inventory-1\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003de9101074-f9ff-496f-9655-ecaeda9b9673",
+      "url": "/api/v1/games/together/by/leonard?token\u003df3333e2d-25b3-4b24-ab3a-5c71643c22e0",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"e9101074-f9ff-496f-9655-ecaeda9b9673\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"penny\",\n  \"token\": \"f3333e2d-25b3-4b24-ab3a-5c71643c22e0\",\n  \"entities\": {\n    \"inventory-2\": {\n      \"id\": \"inventory-2\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"penny\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d4a7832a2-57af-4bd6-b69d-59b12a45ba01",
+      "url": "/api/v1/games/together/by/leonard?token\u003d2b788f28-f2c1-4d6d-9309-d0c7540ab757",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"4a7832a2-57af-4bd6-b69d-59b12a45ba01\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"sheldon\",\n  \"token\": \"2b788f28-f2c1-4d6d-9309-d0c7540ab757\",\n  \"entities\": {\n    \"inventory-3\": {\n      \"id\": \"inventory-3\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"sheldon\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d4aa644d8-239c-4e14-88ad-0dff2954882c",
+      "url": "/api/v1/games/together/by/leonard?token\u003deef28216-3afe-4827-a392-1e49fc8d19a2",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"4aa644d8-239c-4e14-88ad-0dff2954882c\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"eef28216-3afe-4827-a392-1e49fc8d19a2\",\n  \"entities\": {\n    \"inventory-1\": {\n      \"id\": \"inventory-1\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }
@@ -76,46 +76,46 @@
   "safe-for-humans": [
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
+      "url": "/api/v1/games/together/by/leonard?token\u003dd6b96f63-4349-4d6b-8891-a1f66750bf22",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"7e299a31-a16d-4c4c-a890-7dd2a7d7e518\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"d6b96f63-4349-4d6b-8891-a1f66750bf22\",\n  \"entities\": {\n    \"inventory-4\": {\n      \"id\": \"inventory-4\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
+      "url": "/api/v1/games/joinNext?token\u003dd6b96f63-4349-4d6b-8891-a1f66750bf22",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"howard\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
-      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@58f290bc"
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@1bb172dd"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
+      "url": "/api/v1/games/joinNext?token\u003dd6b96f63-4349-4d6b-8891-a1f66750bf22",
       "requestBody": "{\n  \"password\": \"wrongpassw0\",\n  \"gameName\": \"together\",\n  \"playerName\": \"penny\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
-      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@1fa98a22"
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@3593e074"
     },
     {
       "method": "POST",
-      "url": "/api/v1/games/joinNext?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
+      "url": "/api/v1/games/joinNext?token\u003dd6b96f63-4349-4d6b-8891-a1f66750bf22",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"gameName\": \"together\",\n  \"playerName\": \"leonard\",\n  \"creatorName\": \"leonard\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"You should join games in which are you not joined\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#joinNext(JoinNextForm)",
-      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@2976ef56"
+      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@6fa3def8"
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003d7e299a31-a16d-4c4c-a890-7dd2a7d7e518",
+      "url": "/api/v1/games/together/by/leonard?token\u003dd6b96f63-4349-4d6b-8891-a1f66750bf22",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"7e299a31-a16d-4c4c-a890-7dd2a7d7e518\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"d6b96f63-4349-4d6b-8891-a1f66750bf22\",\n  \"entities\": {\n    \"inventory-4\": {\n      \"id\": \"inventory-4\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }

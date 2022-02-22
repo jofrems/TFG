@@ -5,14 +5,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"54dabc28-01c3-4438-8ded-bcc9cee67d67\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"c230bb35-bfbb-4643-925e-888f35b0a4ff\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games/byJoined",
-      "requestBody": "{\n  \"token\": \"54dabc28-01c3-4438-8ded-bcc9cee67d67\"\n}",
+      "requestBody": "{\n  \"token\": \"c230bb35-bfbb-4643-925e-888f35b0a4ff\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"leonard\",\n      \"gameName\": \"mygame\",\n      \"joinedPlayerNames\": [\n        \"leonard\"\n      ]\n    }\n  ]\n}",
       "handler": "com.tfg.game.games.api.GamesApi#listGamesByJoined(ListGamesByJoinedForm)",
@@ -20,10 +20,10 @@
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/mygame/by/leonard?token\u003d54dabc28-01c3-4438-8ded-bcc9cee67d67",
+      "url": "/api/v1/games/mygame/by/leonard?token\u003dc230bb35-bfbb-4643-925e-888f35b0a4ff",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"mygame\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"54dabc28-01c3-4438-8ded-bcc9cee67d67\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"mygame\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"c230bb35-bfbb-4643-925e-888f35b0a4ff\",\n  \"entities\": {\n    \"inventory-23\": {\n      \"id\": \"inventory-23\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }
@@ -34,7 +34,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"6b80543d-32ab-4c32-9630-8792501e2293\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"672e34d6-67c1-423a-81f3-f9b5bcf7b88f\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -49,12 +49,12 @@
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/alone/by/penny?token\u003d6b80543d-32ab-4c32-9630-8792501e2293",
+      "url": "/api/v1/games/alone/by/penny?token\u003d672e34d6-67c1-423a-81f3-f9b5bcf7b88f",
       "requestBody": "null",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"You should play only games in which you are joined\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
-      "resolvedException": "You should play only games in which you are joined\njava.io.PrintWriter@117fb9ba"
+      "resolvedException": "You should play only games in which you are joined\njava.io.PrintWriter@433b546f"
     }
   ],
   "play-your-friends-game": [
@@ -63,14 +63,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"85a01f2f-d80b-4d08-a26d-0ebd3b43e3b8\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"c4dc3868-d4bf-43f2-9539-6780578e7597\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games/byJoined",
-      "requestBody": "{\n  \"token\": \"85a01f2f-d80b-4d08-a26d-0ebd3b43e3b8\"\n}",
+      "requestBody": "{\n  \"token\": \"c4dc3868-d4bf-43f2-9539-6780578e7597\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"penny\",\n      \"gameName\": \"together\",\n      \"joinedPlayerNames\": [\n        \"penny\",\n        \"leonard\"\n      ]\n    }\n  ]\n}",
       "handler": "com.tfg.game.games.api.GamesApi#listGamesByJoined(ListGamesByJoinedForm)",
@@ -78,10 +78,10 @@
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/penny?token\u003d85a01f2f-d80b-4d08-a26d-0ebd3b43e3b8",
+      "url": "/api/v1/games/together/by/penny?token\u003dc4dc3868-d4bf-43f2-9539-6780578e7597",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"penny\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"85a01f2f-d80b-4d08-a26d-0ebd3b43e3b8\",\n  \"entities\": {}\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"penny\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"c4dc3868-d4bf-43f2-9539-6780578e7597\",\n  \"entities\": {\n    \"inventory-26\": {\n      \"id\": \"inventory-26\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }

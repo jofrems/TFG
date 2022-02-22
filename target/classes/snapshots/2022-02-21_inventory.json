@@ -1,0 +1,13 @@
+{
+  "see-your-inventory": [
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003deb89e65f-c558-46fa-91c8-813829221c16",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"eb89e65f-c558-46fa-91c8-813829221c16\",\n  \"entities\": {\n    \"inventory-6\": {\n      \"id\": \"inventory-6\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"type\": \"inventory\"\n    }\n  }\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    }
+  ]
+}
