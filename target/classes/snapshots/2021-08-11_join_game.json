@@ -5,7 +5,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"73036093-b027-4d9f-90e0-9c55d9486027\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"19d54f58-8fad-49e0-9e67-842fd8651f05\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -21,7 +21,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games/join",
-      "requestBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"penny\",\n  \"token\": \"73036093-b027-4d9f-90e0-9c55d9486027\"\n}",
+      "requestBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"penny\",\n  \"token\": \"19d54f58-8fad-49e0-9e67-842fd8651f05\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"You have joined together game from penny successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#join(JoinGameForm)",
@@ -30,7 +30,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games/byJoined",
-      "requestBody": "{\n  \"token\": \"73036093-b027-4d9f-90e0-9c55d9486027\"\n}",
+      "requestBody": "{\n  \"token\": \"19d54f58-8fad-49e0-9e67-842fd8651f05\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"penny\",\n      \"gameName\": \"together\",\n      \"joinedPlayerNames\": [\n        \"penny\",\n        \"leonard\"\n      ]\n    }\n  ]\n}",
       "handler": "com.tfg.game.games.api.GamesApi#listGamesByJoined(ListGamesByJoinedForm)",
@@ -39,7 +39,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games/byJoined",
-      "requestBody": "{\n  \"token\": \"73036093-b027-4d9f-90e0-9c55d9486027\"\n}",
+      "requestBody": "{\n  \"token\": \"19d54f58-8fad-49e0-9e67-842fd8651f05\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"penny\",\n      \"gameName\": \"together\",\n      \"joinedPlayerNames\": [\n        \"penny\",\n        \"leonard\"\n      ]\n    },\n    {\n      \"creatorName\": \"leonard\",\n      \"gameName\": \"alone\",\n      \"joinedPlayerNames\": [\n        \"leonard\"\n      ]\n    }\n  ]\n}",
       "handler": "com.tfg.game.games.api.GamesApi#listGamesByJoined(ListGamesByJoinedForm)",
@@ -52,7 +52,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"f5dff07e-d5f4-46e2-8b21-67d198286248\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"7bcf7ff8-6e7a-49a5-b855-c0292813a883\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -68,7 +68,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games/join",
-      "requestBody": "{\n  \"gameName\": \"first\",\n  \"creatorName\": \"penny\",\n  \"token\": \"f5dff07e-d5f4-46e2-8b21-67d198286248\"\n}",
+      "requestBody": "{\n  \"gameName\": \"first\",\n  \"creatorName\": \"penny\",\n  \"token\": \"7bcf7ff8-6e7a-49a5-b855-c0292813a883\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"You have joined first game from penny successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#join(JoinGameForm)",
@@ -90,7 +90,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"8ffd7202-15e3-460d-969a-de098a1d2500\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"b9eb9830-4e6c-40ed-84a4-fb958e9f3426\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -101,7 +101,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The friend name should be present\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#listGamesByCreator(ListGamesByCreatorForm)",
-      "resolvedException": "The friend name should be present\njava.io.PrintWriter@2aa811f9"
+      "resolvedException": "The friend name should be present\njava.io.PrintWriter@c677d7e"
     },
     {
       "method": "POST",
@@ -110,7 +110,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The friend name should be an existing player\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#listGamesByCreator(ListGamesByCreatorForm)",
-      "resolvedException": "The friend name should be an existing player\njava.io.PrintWriter@4b7e4d14"
+      "resolvedException": "The friend name should be an existing player\njava.io.PrintWriter@270f7b4d"
     },
     {
       "method": "POST",
@@ -133,11 +133,11 @@
     {
       "method": "POST",
       "url": "/api/v1/games/join",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"creatorName\": \"leonard\",\n  \"token\": \"8ffd7202-15e3-460d-969a-de098a1d2500\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"creatorName\": \"leonard\",\n  \"token\": \"b9eb9830-4e6c-40ed-84a4-fb958e9f3426\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"You should join games in which are you not joined\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#join(JoinGameForm)",
-      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@737ff5c4"
+      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@d190639"
     },
     {
       "method": "POST",
@@ -151,7 +151,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games/join",
-      "requestBody": "{\n  \"gameName\": \"first\",\n  \"creatorName\": \"penny\",\n  \"token\": \"8ffd7202-15e3-460d-969a-de098a1d2500\"\n}",
+      "requestBody": "{\n  \"gameName\": \"first\",\n  \"creatorName\": \"penny\",\n  \"token\": \"b9eb9830-4e6c-40ed-84a4-fb958e9f3426\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"You have joined first game from penny successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#join(JoinGameForm)",
@@ -169,11 +169,11 @@
     {
       "method": "POST",
       "url": "/api/v1/games/join",
-      "requestBody": "{\n  \"gameName\": \"first\",\n  \"creatorName\": \"penny\",\n  \"token\": \"8ffd7202-15e3-460d-969a-de098a1d2500\"\n}",
+      "requestBody": "{\n  \"gameName\": \"first\",\n  \"creatorName\": \"penny\",\n  \"token\": \"b9eb9830-4e6c-40ed-84a4-fb958e9f3426\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"You should join games in which are you not joined\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#join(JoinGameForm)",
-      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@3cf70afa"
+      "resolvedException": "You should join games in which are you not joined\njava.io.PrintWriter@23358740"
     }
   ]
 }

@@ -9,18 +9,18 @@ import static com.tfg.game.testSteps.game.OwnedTestView.byOwner;
 import static com.google.common.truth.Truth8.assertThat;
 
 @Component
-public class ShouldHaveInventoryStep extends AbstractPostLineStep {
+public class ShouldHaveStep extends AbstractPostLineStep {
 
 
     private final GameTestView gameTestView;
 
-    public ShouldHaveInventoryStep(GameTestView gameTestView) {
+    public ShouldHaveStep(GameTestView gameTestView) {
         this.gameTestView = gameTestView;
     }
 
     @Override
     protected String getRegex() {
-        return "\"([^\"]+)\" should have (\\d+) inventory";
+        return "\"([^\"]+)\" should have (\\d+) ([^\"]+)";
     }
 
     @Override
@@ -28,7 +28,7 @@ public class ShouldHaveInventoryStep extends AbstractPostLineStep {
         var playerName = match[1];
         var count = Integer.parseInt(match[2]);
 
-        var planets = gameTestView.streamEntities(byOwner(playerName).and(byType("inventory")));
-        assertThat(planets).hasSize(count);
+        var inventory = gameTestView.streamEntities(byOwner(playerName).and(byType("inventory")));
+        assertThat(inventory).hasSize(count);
     }
 }

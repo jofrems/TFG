@@ -1,0 +1,13 @@
+{
+  "see-elements": [
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d7948248b-57b9-4383-8be8-297ba536fa36",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"7948248b-57b9-4383-8be8-297ba536fa36\",\n  \"entities\": {\n    \"inventory-5\": {\n      \"cities\": 4,\n      \"haveElements\": true,\n      \"id\": \"inventory-5\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"roads\": 15,\n      \"towns\": 5,\n      \"type\": \"inventory\"\n    }\n  }\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    }
+  ]
+}
