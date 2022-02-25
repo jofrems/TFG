@@ -1,6 +1,6 @@
 package com.tfg.game.entities.inventory;
 
-
+import com.tfg.game.components.resources.ResourcesController;
 import com.tfg.game.components.elements.ElementsController;
 import com.tfg.game.components.owneds.OwnedsController;
 import com.tfg.game.components.typeds.TypedsController;
@@ -16,12 +16,14 @@ public class InventoryFactory {
     private final OwnedsController ownedsController;
     private final TypedsController typedsController;
     private final ElementsController elementsController;
+    private final ResourcesController resourcesController;
 
-    public InventoryFactory(EntityIdGenerator entityIdGenerator,  OwnedsController ownedsController, TypedsController typedsController, ElementsController elementsController) {
+    public InventoryFactory(EntityIdGenerator entityIdGenerator,  OwnedsController ownedsController, TypedsController typedsController, ElementsController elementsController, ResourcesController resourcesController) {
         this.entityIdGenerator = entityIdGenerator;
         this.ownedsController = ownedsController;
         this.typedsController = typedsController;
         this.elementsController = elementsController;
+        this.resourcesController = resourcesController;
     }
 
     public void buildInventory(Game game, Player owner) {
@@ -29,5 +31,6 @@ public class InventoryFactory {
         ownedsController.create(entityId, game, owner);
         typedsController.create(entityId, game, "inventory");
         elementsController.create(entityId,game);
+        resourcesController.create(entityId,game);
     }
 }

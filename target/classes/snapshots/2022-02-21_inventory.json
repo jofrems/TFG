@@ -2,10 +2,10 @@
   "see-your-inventory": [
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/leonard?token\u003db3f9b4a8-1244-43bd-ae0b-cf86bdae8d56",
+      "url": "/api/v1/games/together/by/leonard?token\u003d1f9ba273-a738-4572-9cc1-f6760ae0cce6",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"b3f9b4a8-1244-43bd-ae0b-cf86bdae8d56\",\n  \"entities\": {\n    \"inventory-6\": {\n      \"cities\": 4,\n      \"haveElements\": true,\n      \"id\": \"inventory-6\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"owner\": \"leonard\",\n      \"roads\": 15,\n      \"towns\": 5,\n      \"type\": \"inventory\"\n    }\n  }\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"1f9ba273-a738-4572-9cc1-f6760ae0cce6\",\n  \"entities\": {\n    \"inventory-6\": {\n      \"brick\": 0,\n      \"cities\": 4,\n      \"grain\": 0,\n      \"haveElements\": true,\n      \"haveResources\": true,\n      \"id\": \"inventory-6\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"lumber\": 0,\n      \"ore\": 0,\n      \"owner\": \"leonard\",\n      \"roads\": 15,\n      \"towns\": 5,\n      \"type\": \"inventory\",\n      \"wool\": 0\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }

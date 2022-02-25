@@ -18,7 +18,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player name should be present\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
-      "resolvedException": "Player name should be present\njava.io.PrintWriter@6614ecca"
+      "resolvedException": "Player name should be present\njava.io.PrintWriter@27bbe773"
     },
     {
       "method": "POST",
@@ -27,7 +27,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player name should be at least three characters long\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
-      "resolvedException": "Player name should be at least three characters long\njava.io.PrintWriter@7294a684"
+      "resolvedException": "Player name should be at least three characters long\njava.io.PrintWriter@2fcffc05"
     },
     {
       "method": "POST",
@@ -36,7 +36,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Password should be present\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
-      "resolvedException": "Password should be present\njava.io.PrintWriter@6651efa4"
+      "resolvedException": "Password should be present\njava.io.PrintWriter@ea84346"
     },
     {
       "method": "POST",
@@ -45,7 +45,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player password should be at least six characters long\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
-      "resolvedException": "Player password should be at least six characters long\njava.io.PrintWriter@4db568e1"
+      "resolvedException": "Player password should be at least six characters long\njava.io.PrintWriter@1e1ea16d"
     },
     {
       "method": "POST",
@@ -54,7 +54,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player password should have at least one number\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
-      "resolvedException": "Player password should have at least one number\njava.io.PrintWriter@120d13ae"
+      "resolvedException": "Player password should have at least one number\njava.io.PrintWriter@2157889c"
     },
     {
       "method": "POST",
@@ -63,7 +63,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player password should have at least one letter\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
-      "resolvedException": "Player password should have at least one letter\njava.io.PrintWriter@7cbe3a05"
+      "resolvedException": "Player password should have at least one letter\njava.io.PrintWriter@e97f51c"
     }
   ]
 }

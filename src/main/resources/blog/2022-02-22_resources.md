@@ -37,7 +37,7 @@ Also, you will be able to see how many are left at any point during the game.
 
 When the game starts you will be provided of 0 wood, 0 iron and 0 cereals.
 
-### See wood
+### See lumber
 
 When the game starts, each player gets some resources in their planets.
 
@@ -45,10 +45,16 @@ When the game starts, each player gets some resources in their planets.
  <!-- SNAPSHOT status=200 -->  
  * "leonard" should be the current player.
  * Game round should be 1.
- * "leonard" should have 0 wood in the inventory.
+ * There should be 0 lumber in the inventory.
 
-### See iron
- * "leonard" should have 0 iron in the inventory.
+### See brick
+ * There should be 0 brick in the inventory.
 
-### See cereals
- * "leonard" should have 0 cereals in the inventory.
+### See wool
+ * There should be 0 wool in the inventory.
+
+### See grain
+ * There should be 0 grain in the inventory.
+
+### See ore
+ * There should be 0 ore in the inventory.

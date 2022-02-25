@@ -1,0 +1,13 @@
+{
+  "see-resources": [
+    {
+      "method": "GET",
+      "url": "/api/v1/games/together/by/leonard?token\u003d8bc0f6a4-3db8-47ed-8fcb-0f6cc449e7cd",
+      "requestBody": "null",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"8bc0f6a4-3db8-47ed-8fcb-0f6cc449e7cd\",\n  \"entities\": {\n    \"inventory-27\": {\n      \"brick\": 0,\n      \"cities\": 4,\n      \"grain\": 0,\n      \"haveElements\": true,\n      \"haveResources\": true,\n      \"id\": \"inventory-27\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"lumber\": 0,\n      \"ore\": 0,\n      \"owner\": \"leonard\",\n      \"roads\": 15,\n      \"towns\": 5,\n      \"type\": \"inventory\",\n      \"wool\": 0\n    }\n  }\n}",
+      "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
+      "resolvedException": "null"
+    }
+  ]
+}
