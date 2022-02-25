@@ -1,7 +1,6 @@
-
-//import { LoadableComponent } from "./LoadableComponent";
+import { ElementsComponent } from "./ElementsComponent";
 
 
 export const Components = [
-  //LoadableComponent,
+  ElementsComponent,
 ];

@@ -4,6 +4,8 @@ import { locatedTestSteps } from "./locatedTestSteps";
 import { namedTestSteps } from "./namedTestSteps";
 import { populatedTestSteps } from "./populatedTestSteps";
 import { sailTestSteps } from "./sailTestSteps";
+import { elementsTestSteps } from "./elementsTestSteps";
+
 
 export const componentsTestSteps = [
   dockTestSteps,
@@ -12,4 +14,5 @@ export const componentsTestSteps = [
   namedTestSteps,
   populatedTestSteps,
   sailTestSteps,
+  elementsTestSteps,
 ];

@@ -8,7 +8,7 @@ import userEvent from "@testing-library/user-event";
 
 export const gameTestSteps: PostLineStep[] = [
   step(/You should be at the game screen/, () => {
-    expect(screen.getByRole("heading", { name: "Game!" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Catan" })).toBeInTheDocument();
   }),
   step(
     /Playing game should be "([^"]+)" created by "([^"]+)"/,
