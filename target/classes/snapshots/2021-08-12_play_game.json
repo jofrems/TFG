@@ -5,14 +5,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"d759c5ea-5283-4b01-adac-f43a0b57f898\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"fbd29b47-7a1f-4d99-bdbc-a1d17f2441aa\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games/byJoined",
-      "requestBody": "{\n  \"token\": \"d759c5ea-5283-4b01-adac-f43a0b57f898\"\n}",
+      "requestBody": "{\n  \"token\": \"fbd29b47-7a1f-4d99-bdbc-a1d17f2441aa\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"leonard\",\n      \"gameName\": \"mygame\",\n      \"joinedPlayerNames\": [\n        \"leonard\"\n      ]\n    }\n  ]\n}",
       "handler": "com.tfg.game.games.api.GamesApi#listGamesByJoined(ListGamesByJoinedForm)",
@@ -20,10 +20,10 @@
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/mygame/by/leonard?token\u003dd759c5ea-5283-4b01-adac-f43a0b57f898",
+      "url": "/api/v1/games/mygame/by/leonard?token\u003dfbd29b47-7a1f-4d99-bdbc-a1d17f2441aa",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"mygame\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"d759c5ea-5283-4b01-adac-f43a0b57f898\",\n  \"entities\": {\n    \"inventory-23\": {\n      \"brick\": 0,\n      \"cities\": 4,\n      \"grain\": 0,\n      \"haveElements\": true,\n      \"haveResources\": true,\n      \"id\": \"inventory-23\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"lumber\": 0,\n      \"ore\": 0,\n      \"owner\": \"leonard\",\n      \"roads\": 15,\n      \"towns\": 5,\n      \"type\": \"inventory\",\n      \"wool\": 0\n    }\n  }\n}",
+      "responseBody": "{\n  \"gameName\": \"mygame\",\n  \"creatorName\": \"leonard\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"fbd29b47-7a1f-4d99-bdbc-a1d17f2441aa\",\n  \"entities\": {\n    \"inventory-23\": {\n      \"brick\": 0,\n      \"cities\": 4,\n      \"grain\": 0,\n      \"haveElements\": true,\n      \"haveResources\": true,\n      \"id\": \"inventory-23\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"lumber\": 0,\n      \"ore\": 0,\n      \"owner\": \"leonard\",\n      \"roads\": 15,\n      \"towns\": 5,\n      \"type\": \"inventory\",\n      \"wool\": 0\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }
@@ -34,7 +34,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"9b9733da-2fe8-4850-9718-a5aa347008ee\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"90fd3fe5-8155-4a12-8356-5b1ee64efb57\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -49,12 +49,12 @@
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/alone/by/penny?token\u003d9b9733da-2fe8-4850-9718-a5aa347008ee",
+      "url": "/api/v1/games/alone/by/penny?token\u003d90fd3fe5-8155-4a12-8356-5b1ee64efb57",
       "requestBody": "null",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"You should play only games in which you are joined\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
-      "resolvedException": "You should play only games in which you are joined\njava.io.PrintWriter@4468c0ea"
+      "resolvedException": "You should play only games in which you are joined\njava.io.PrintWriter@74cd8c55"
     }
   ],
   "play-your-friends-game": [
@@ -63,14 +63,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"b2f35b5f-6145-49c4-9d39-84666f54e2f4\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"6872b134-6a30-4022-9879-1571ac2601da\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games/byJoined",
-      "requestBody": "{\n  \"token\": \"b2f35b5f-6145-49c4-9d39-84666f54e2f4\"\n}",
+      "requestBody": "{\n  \"token\": \"6872b134-6a30-4022-9879-1571ac2601da\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"games\": [\n    {\n      \"creatorName\": \"penny\",\n      \"gameName\": \"together\",\n      \"joinedPlayerNames\": [\n        \"penny\",\n        \"leonard\"\n      ]\n    }\n  ]\n}",
       "handler": "com.tfg.game.games.api.GamesApi#listGamesByJoined(ListGamesByJoinedForm)",
@@ -78,10 +78,10 @@
     },
     {
       "method": "GET",
-      "url": "/api/v1/games/together/by/penny?token\u003db2f35b5f-6145-49c4-9d39-84666f54e2f4",
+      "url": "/api/v1/games/together/by/penny?token\u003d6872b134-6a30-4022-9879-1571ac2601da",
       "requestBody": "null",
       "responseStatus": 200,
-      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"penny\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"b2f35b5f-6145-49c4-9d39-84666f54e2f4\",\n  \"entities\": {\n    \"inventory-26\": {\n      \"brick\": 0,\n      \"cities\": 4,\n      \"grain\": 0,\n      \"haveElements\": true,\n      \"haveResources\": true,\n      \"id\": \"inventory-26\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"lumber\": 0,\n      \"ore\": 0,\n      \"owner\": \"leonard\",\n      \"roads\": 15,\n      \"towns\": 5,\n      \"type\": \"inventory\",\n      \"wool\": 0\n    }\n  }\n}",
+      "responseBody": "{\n  \"gameName\": \"together\",\n  \"creatorName\": \"penny\",\n  \"roundNumber\": 1,\n  \"playerName\": \"leonard\",\n  \"token\": \"6872b134-6a30-4022-9879-1571ac2601da\",\n  \"entities\": {\n    \"inventory-26\": {\n      \"brick\": 0,\n      \"cities\": 4,\n      \"grain\": 0,\n      \"haveElements\": true,\n      \"haveResources\": true,\n      \"id\": \"inventory-26\",\n      \"isOwned\": true,\n      \"isTyped\": true,\n      \"lumber\": 0,\n      \"ore\": 0,\n      \"owner\": \"leonard\",\n      \"roads\": 15,\n      \"towns\": 5,\n      \"type\": \"inventory\",\n      \"wool\": 0\n    }\n  }\n}",
       "handler": "com.tfg.game.games.api.GamesApi#get(String, String, String)",
       "resolvedException": "null"
     }

@@ -5,6 +5,7 @@ import { PlayerHeader } from "../PlayerScreen/PlayerHeader";
 import { EntityList } from "../EntityScreen/EntityList";
 import { GameHeader } from "./GameHeader";
 import { ElementsComponent } from "www/components/ElementsComponent";
+import { ResourcesComponent } from "www/components/ResourcesComponent";
 import { EntityComponents } from "../EntityScreen/EntityComponents";
 import { getEntityById } from "www/store/game/selectors";
 
