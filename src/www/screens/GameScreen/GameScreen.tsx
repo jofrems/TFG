@@ -4,10 +4,9 @@ import { useAppSelector } from "www/store/hooks";
 import { PlayerHeader } from "../PlayerScreen/PlayerHeader";
 import { EntityList } from "../EntityScreen/EntityList";
 import { GameHeader } from "./GameHeader";
-import { ElementsComponent } from "www/components/ElementsComponent";
-import { ResourcesComponent } from "www/components/ResourcesComponent";
 import { EntityComponents } from "../EntityScreen/EntityComponents";
 import { getEntityById } from "www/store/game/selectors";
+import { HexComponent } from "./HexComponent";
 
 
 export function GameScreen() {
@@ -25,6 +24,7 @@ export function GameScreen() {
       <GameHeader />
       <main>
         <h1>Catan</h1>
+        <HexComponent />
         <EntityList entities={entities} />
         <div>
         <h4>Inventory:</h4>

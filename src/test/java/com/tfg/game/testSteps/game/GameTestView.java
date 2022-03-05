@@ -62,6 +62,10 @@ public class GameTestView implements NavigableScreen {
         return streamEntities(predicate).findFirst();
     }
 
+    public int countEntities(Predicate<EntityResponse> predicate) {
+        return (int) streamEntities(predicate).count();
+    }
+
     /////////// --- RestMethods
 
     public GameResponse fetchGame(String gameName, String creatorName, String token) {

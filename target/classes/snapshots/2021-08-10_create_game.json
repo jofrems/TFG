@@ -5,14 +5,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"1dd5d969-5a8b-461d-af85-0dabdc2bd077\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"cfbdf9e4-0103-45ab-ac92-071ecef23554\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"1dd5d969-5a8b-461d-af85-0dabdc2bd077\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"cfbdf9e4-0103-45ab-ac92-071ecef23554\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -25,14 +25,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"6ed5fd67-7775-4c4d-b74e-dc4d7986e857\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"a8ec0ce9-d2c3-4d4a-800d-e627911a0be6\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"6ed5fd67-7775-4c4d-b74e-dc4d7986e857\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"a8ec0ce9-d2c3-4d4a-800d-e627911a0be6\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -54,14 +54,14 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"5ac7ce19-c15d-415e-8d60-5db2571edfdc\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"cc2b7e74-128a-44e5-b0e8-4c3c98e50b42\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"5ac7ce19-c15d-415e-8d60-5db2571edfdc\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"cc2b7e74-128a-44e5-b0e8-4c3c98e50b42\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -70,7 +70,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"secondgame\",\n  \"token\": \"5ac7ce19-c15d-415e-8d60-5db2571edfdc\"\n}",
+      "requestBody": "{\n  \"gameName\": \"secondgame\",\n  \"token\": \"cc2b7e74-128a-44e5-b0e8-4c3c98e50b42\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The secondgame game has been created successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -92,18 +92,18 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"d7d26763-ee39-4cc4-b9bd-1590975ba33e\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"d8e2e5db-bd70-4ce9-849f-cbc8e7daa1e0\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"\",\n  \"token\": \"d7d26763-ee39-4cc4-b9bd-1590975ba33e\"\n}",
+      "requestBody": "{\n  \"gameName\": \"\",\n  \"token\": \"d8e2e5db-bd70-4ce9-849f-cbc8e7daa1e0\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Game name should be present\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#createGame(CreateGameForm)",
-      "resolvedException": "Game name should be present\njava.io.PrintWriter@e3692ca"
+      "resolvedException": "Game name should be present\njava.io.PrintWriter@2eace5bc"
     },
     {
       "method": "POST",
@@ -117,7 +117,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"d7d26763-ee39-4cc4-b9bd-1590975ba33e\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"d8e2e5db-bd70-4ce9-849f-cbc8e7daa1e0\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#createGame(CreateGameForm)",
@@ -126,11 +126,11 @@
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"d7d26763-ee39-4cc4-b9bd-1590975ba33e\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"d8e2e5db-bd70-4ce9-849f-cbc8e7daa1e0\"\n}",
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The mygame game already exists\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#createGame(CreateGameForm)",
-      "resolvedException": "The mygame game already exists\njava.io.PrintWriter@30bf881e"
+      "resolvedException": "The mygame game already exists\njava.io.PrintWriter@4a70561f"
     },
     {
       "method": "POST",
@@ -146,7 +146,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"penny\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"9566de43-4825-4786-8aa5-e60d3391379f\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"c93d5516-5ba0-40b5-8d92-800051f91a43\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -162,7 +162,7 @@
     {
       "method": "POST",
       "url": "/api/v1/games",
-      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"9566de43-4825-4786-8aa5-e60d3391379f\"\n}",
+      "requestBody": "{\n  \"gameName\": \"mygame\",\n  \"token\": \"c93d5516-5ba0-40b5-8d92-800051f91a43\"\n}",
       "responseStatus": 200,
       "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The mygame game has been created successfully\"\n}",
       "handler": "com.tfg.game.games.api.GamesApi#createGame(CreateGameForm)",
