@@ -28,7 +28,7 @@ public class LocatedsEntityDataGenerator implements EntityPublicDataGenerator {
             var entityId = component.getEntityId();
             data.putEntityProperty(entityId, "isLocated", true);
             data.putEntityProperty(entityId, "row", component.getRow());
-           // data.putEntityProperty(entityId, "column", component.getColumn());
+            data.putEntityProperty(entityId, "column", component.getColumn());
         });
     }
 

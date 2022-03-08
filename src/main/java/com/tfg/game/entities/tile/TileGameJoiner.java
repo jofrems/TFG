@@ -20,11 +20,11 @@ public class TileGameJoiner implements GameJoiner {
     public static final int BRICK = 3;
     public static final int ORE = 4;
 
-    private final int MAX_TILES = 35;
-    private int columnLocations[]= {3,4,5,2,3,4,5,1,2,4,5,1,2,3,4,1,2,3   ,3,4,5,6,2,6,1,6,0,6,0,5,0,4,1,2,3,3};
-    private int rowLocations[] =   {1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5   ,0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,6,3};
+    private final int MAX_TILES = 37;
+    private int columnLocations[]= {3,4,5,2,3,4,5,1,2,4,5,1,2,3,4,1,2,3   ,3,4,5,6,2,6,1,6,0,6,0,5,0,4,0,1,2,3,3};
+    private int rowLocations[] =   {1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5   ,0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,6,6,3};
     private int weights []= {2,3,3,4,4,5,5,6,6,8,8,9,9,10,10,11,11,12};
-    private int types []= {0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,4,4,4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-2};
+    private int types []= {0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,4,4,4, -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-2};
 
     public TileGameJoiner(TileFactory tileFactory) {
         this.tileFactory = tileFactory;

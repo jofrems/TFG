@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "csstype": "^3.0.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-markdown": "^6.0.3",
@@ -12,6 +13,7 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
+    "styled-components": "^5.3.3",
     "typescript": "^4.1.2",
     "underscore": "^1.13.1",
     "web-vitals": "^1.0.1"
@@ -49,6 +51,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.0",
+    "@types/styled-components": "^5.1.24",
     "@types/underscore": "^1.11.3",
     "chalk": "^4.1.2",
     "jest-diff": "^27.2.0",

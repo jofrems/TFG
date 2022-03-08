@@ -6,7 +6,8 @@ import { EntityList } from "../EntityScreen/EntityList";
 import { GameHeader } from "./GameHeader";
 import { EntityComponents } from "../EntityScreen/EntityComponents";
 import { getEntityById } from "www/store/game/selectors";
-import { HexComponent } from "./HexComponent";
+import { HexGeneratorComponent } from "./HexGeneratorComponent";
+
 
 
 export function GameScreen() {
@@ -24,7 +25,7 @@ export function GameScreen() {
       <GameHeader />
       <main>
         <h1>Catan</h1>
-        <HexComponent />
+        <HexGeneratorComponent entities={entities}/>
         <EntityList entities={entities} />
         <div>
         <h4>Inventory:</h4>
