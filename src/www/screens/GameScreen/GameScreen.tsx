@@ -13,11 +13,10 @@ import { HexGeneratorComponent } from "./HexGeneratorComponent";
 export function GameScreen() {
   const getAllGameEntities = useMemo(makeGetAllGameEntities, []);
   const entities = useAppSelector(getAllGameEntities);
+  console.log(entities);
   const entityId = entities[0].id;
   const entity = useAppSelector((s) => getEntityById(s, { entityId }))!;
   if (!entity) return null;
-
-  //console.log(entity);
 
   return (
     <>

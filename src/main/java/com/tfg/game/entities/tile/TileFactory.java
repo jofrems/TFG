@@ -19,8 +19,6 @@ public class TileFactory {
     private final TileTypeController tileTypeController;
     private final TileWeightController tileWeightController;
     private final LocatedsController positionController;
-    //afegir locatedController amd 2 dimensions
-
 
 
     public TileFactory(EntityIdGenerator entityIdGenerator, TypedsController typedsController, OwnedsController ownedsController, TileWeightController tileWeightController, TileTypeController tileTypeController, LocatedsController positionController) {
@@ -35,7 +33,7 @@ public class TileFactory {
     public void buildTile(Game game, Player owner, int tileType, int weight, int row, int column) {
         var entityId = entityIdGenerator.nextEntityId("tile");
         typedsController.create(entityId, game, "tile");
-        ownedsController.create(entityId, game, owner);
+        ownedsController.create(entityId, game);
         tileTypeController.create(entityId,game, tileType);
         tileWeightController.create(entityId,game, weight);
         positionController.create(entityId, game, row, column);

@@ -8,4 +8,5 @@ export const backendTestSteps: PostLineStep[] = [
   step(/there is a game "[^"]+" created by "[^"]+"/, () => {}),
   step(/there are players "[^"]+"/, () => {}),
   step(/"[^"]+" has joined the game "[^"]+" created by "[^"]+"/, () => {}),
+  step(/There should be 37 tiles/, () => {}),
 ];

@@ -2,6 +2,7 @@ package com.tfg.game.components.tileWeight;
 
 import com.tfg.game.components.elements.Elements;
 import com.tfg.game.ecs.EntityOwnDataGenerator;
+import com.tfg.game.ecs.EntityPublicDataGenerator;
 import com.tfg.game.ecs.GameData;
 import com.tfg.game.games.Game;
 import com.tfg.game.players.Player;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class TileWeightEntityDataGenerator implements EntityOwnDataGenerator{
+public class TileWeightEntityDataGenerator implements EntityPublicDataGenerator {
     private final TileWeightRepository tileWeightRepository;
 
     public TileWeightEntityDataGenerator(TileWeightRepository tileWeightRepository) {
@@ -18,7 +19,7 @@ public class TileWeightEntityDataGenerator implements EntityOwnDataGenerator{
     }
 
     @Override
-    public void generateOwnData(GameData data, Game game, Player playingPlayer, List<String> ownedEntityIds) {
+    public void generatePublicData(GameData data, Game game, Player playingPlayer, List<String> ownedEntityIds) {
         generateTileWeightData(data, ownedEntityIds);
     }
 
