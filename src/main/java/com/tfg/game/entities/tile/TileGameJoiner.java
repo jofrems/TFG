@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class TileGameJoiner implements GameJoiner {
-
-    private final TileFactory tileFactory;
+public class TileGameJoiner {
+    //DELETE IF MAPGAMEJOINER WORKS
+   /* private final TileFactory tileFactory;
 
     public static final int SEA = -1;
     public static final int DESSERT = -2;
@@ -30,7 +30,7 @@ public class TileGameJoiner implements GameJoiner {
         this.tileFactory = tileFactory;
 
     }
-    //posar aqui el que tinc a tiles component
+
     @Override
     public void joinGame(Player owner, Game game) {
         //treure map, fer un for aqui q generi tantes tiles com necessiti, aqui portar la llogica dels tipus de tiles weights etc
@@ -39,7 +39,6 @@ public class TileGameJoiner implements GameJoiner {
                 tileFactory.buildTile(game, owner, types[i], weights[i], rowLocations[i], columnLocations[i]);
             else
                 tileFactory.buildTile(game, owner, types[i], -1, rowLocations[i], columnLocations[i]);
-
         }
-    }
+    }*/
 }

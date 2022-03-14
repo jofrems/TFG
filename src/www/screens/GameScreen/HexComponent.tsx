@@ -24,6 +24,7 @@ transform: rotate(30deg);
 
 
 export function HexComponent({ entity }: any) {
+
   var SEA = -1;
   var DESSERT = -2;
   var LUMBER = 0;
@@ -31,7 +32,7 @@ export function HexComponent({ entity }: any) {
   var WOOL = 2;
   var BRICK = 3;
   var ORE = 4;
-  console.log(entity);
+
   var x = [0,37,112,150,112,37];
   var y = [75,10,10,75,140,140];
 
@@ -45,7 +46,6 @@ export function HexComponent({ entity }: any) {
   var textY = `${y[0]+115*entity.column-180}`;
   var color = "";
 
-  if(entity.type === "tile"){
       switch(entity.TileType){
         case DESSERT:
           color="#663300";
@@ -71,7 +71,6 @@ export function HexComponent({ entity }: any) {
         default:
           color="#000000";
       }      
-  };
   return (
       <g id="hex">
         <Hex fill={color} points={finalLoc}></Hex>
