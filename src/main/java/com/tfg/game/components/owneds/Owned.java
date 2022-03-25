@@ -28,4 +28,9 @@ public class Owned extends EcsComponent {
         return owner;
     }
 
+    public void own(Player player) {
+        this.owner = player;
+    }
+
+
 }

@@ -30,4 +30,11 @@ public class OwnedsController {
     public List<Owned> findAllByGameAndOwner(Game game, Player owner) {
         return ownedsRepository.findAllByGameAndOwner(game, owner);
     }
+
+    public Owned own(String entityId, Player player) {
+        var owned = ownedsRepository.findById(entityId).get();
+        owned.own(player);
+        ownedsRepository.save(owned);
+        return owned;
+    }
 }

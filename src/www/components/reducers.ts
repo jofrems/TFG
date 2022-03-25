@@ -1,7 +1,7 @@
-//import { componentLoadableReducer } from "./LoadableComponent/reducers";
+import { componentOwnReducer } from "./OwnComponent/reducers";
 
 
 export const componentsReducers = {
-  //componentLoadable: componentLoadableReducer,
+  componentOwn: componentOwnReducer,
 
 };

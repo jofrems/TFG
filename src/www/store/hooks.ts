@@ -20,3 +20,15 @@ export const useDispatchForm = (
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, actionCreator, ...refs]);
 };
+
+export const useDispatchFormBig = (
+  actionCreator: Function,
+  ...refs: (string | undefined)[]
+) => {
+  var dispatch = useAppDispatch();
+  return useCallback(() => {
+    const values = refs.map((ref) => ref);
+    dispatch(actionCreator(...values));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch, actionCreator, ...refs]);
+};

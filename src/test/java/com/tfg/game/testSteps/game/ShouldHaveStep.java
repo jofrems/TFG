@@ -5,7 +5,7 @@ import com.tfg.game.testSteps.AbstractPostLineStep;
 import org.springframework.stereotype.Component;
 
 import static com.tfg.game.testSteps.game.TypedTestView.byType;
-import static com.tfg.game.testSteps.game.OwnedTestView.byOwner;
+import static com.tfg.game.testSteps.owneds.OwnedTestView.byOwner;
 import static com.google.common.truth.Truth8.assertThat;
 
 @Component

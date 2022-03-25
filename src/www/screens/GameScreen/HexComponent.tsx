@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import "./hex.css";
 
 const Hex = styled.polygon`
 cursor: pointer;

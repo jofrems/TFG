@@ -5,9 +5,7 @@ import com.tfg.game.testSteps.game.EntityTestView;
 import com.tfg.game.testSteps.game.GameTestView;
 import org.springframework.stereotype.Component;
 
-import java.util.function.Predicate;
 
-import static com.tfg.game.testSteps.game.OwnedTestView.byOwner;
 import static com.tfg.game.testSteps.game.TypedTestView.byType;
 
 @Component

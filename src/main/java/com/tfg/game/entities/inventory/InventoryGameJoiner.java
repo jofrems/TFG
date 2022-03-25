@@ -16,11 +16,6 @@ public class InventoryGameJoiner implements GameJoiner {
 
     @Override
     public void joinGame(Player owner, Game game) {
-        /*int initialPopulation = 10;
-        int initialResources = 10;
-        int initialHP = 10;
-        int initialResearchPoints = 0;*/
-
         inventoryFactory.buildInventory(game, owner);
     }
 }

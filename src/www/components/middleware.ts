@@ -1,7 +1,7 @@
-//import { componentLoadableMiddleware } from "./LoadableComponent/middleware";
+import { componentOwnMiddleware } from "./OwnComponent/middleware";
 
 
 export const componentsMiddlewares = [
   //
-  //componentLoadableMiddleware,
+  componentOwnMiddleware,
 ];

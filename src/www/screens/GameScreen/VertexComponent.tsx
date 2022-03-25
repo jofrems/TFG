@@ -1,5 +1,8 @@
-import styled from "styled-components";
 
+import styled from "styled-components";
+import { useAppSelector, useDispatchFormBig } from "www/store/hooks";
+import { getPlayerName } from "www/store/player/selectors";
+import { own } from "../../components/OwnComponent/actions";
 
 const Vertex = styled.circle`
 cursor: pointer;
@@ -22,11 +25,17 @@ transition-duration: 1s;
 
 
 
-export function VertexComponent({ entity }: any) {
+export function VertexComponent({ entity }: any) { 
+  const currentPlayer = useAppSelector(getPlayerName);
+  const owned = useDispatchFormBig(own, entity.id, currentPlayer);
+
   if(entity.type !== "vertex") return null;
 
-    var yOffset = entity.column*32;
+
     var xOffset = entity.row*65 +66;
+
+    var yOffset = entity.column*32;
+
 
     if(entity.column > 1)
         yOffset = yOffset + 45;
@@ -41,10 +50,28 @@ export function VertexComponent({ entity }: any) {
     
     var xPos = xOffset;
     var yPos = yOffset -70;
+    var entityId = entity.id;
+
+    //generem un color pel jugador aleatoriament
+    var colour= '#';
+     // this is NOT a great hash but serves as an example
+    if(entity.owner != null){
+        var hash = 0;
+        for (var i = 0; i < entity.owner!.length; i++) {
+            hash = entity.owner!.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        for (var i = 0; i < 3; i++) {
+             var value = (hash >> (i * 8)) & 0xFF;
+            colour += ('00' + value.toString(16)).substr(-2);
+        }
+    }else{
+        colour = "white"
+    }
+    
 
   return (
       <g id="vertex">
-        <Vertex cx={xPos} cy={yPos} r="20" stroke="black" stroke-width="3" fill="white"></Vertex>
+        <Vertex id={entityId} cx={xPos} cy={yPos} r="20" stroke="black" stroke-width="3" fill={colour}  onClick={owned}></Vertex>
       </g>    
   );
 }

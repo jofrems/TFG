@@ -17,6 +17,7 @@ public class EntityTestView implements NavigableScreen {
     public EntityTestView(GameTestView gameTestView, NavigatorTestView navigatorTestView) {
         this.gameTestView = gameTestView;
         this.navigatorTestView = navigatorTestView;
+        this.form = new TreeMap<>();
     }
 
     @Override
@@ -70,7 +71,9 @@ public class EntityTestView implements NavigableScreen {
     public boolean getEntityPropertyBoolean(String key) {
         return getEntity().get(key, Boolean.class);
     }
-
+    public boolean getEntityPropertyBoolean(String entityId, String key) {
+        return getEntity(entityId).get(key, Boolean.class);
+    }
     public void putFormKey(String key, Object value) {
         form.put(key, value);
     }
@@ -81,6 +84,9 @@ public class EntityTestView implements NavigableScreen {
 
     public GameResponse post(String collection, String action) {
         return this.post("/api/v1/" + collection + "/" + getEntityId() + "/" + action, new TreeMap<>());
+    }
+    public GameResponse post(String collection, String vertexId, String player, String action) {
+        return this.post("/api/v1/" + collection + "/" + vertexId +"/" + player + "/" + action, new TreeMap<>());
     }
 
     public GameResponse post(String url, Map<String, Object> extraData) {

@@ -23,7 +23,7 @@ public class TypedsGameDataGenerator implements GamePublicDataGenerator {
 
     @Override
     public void generatePublicData(GameData data, Game game, Player playingPlayer) {
-        var components = typedsRepository.findAllByType("planet");
+        var components = typedsRepository.findAllByType("inventory");
         var publicEntityIds = components.stream().map(c -> c.getEntityId()).collect(Collectors.toList());
         entityPublicDataGenerators.forEach(g -> g.generatePublicData(data, game, playingPlayer, publicEntityIds));
     }
