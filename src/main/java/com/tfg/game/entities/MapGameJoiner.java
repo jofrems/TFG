@@ -7,6 +7,11 @@ import com.tfg.game.games.Game;
 import com.tfg.game.games.GameJoiner;
 import com.tfg.game.players.Player;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.function.EntityResponse;
+
+import java.util.Optional;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 @Component
 public class MapGameJoiner implements GameJoiner {
@@ -22,12 +27,14 @@ public class MapGameJoiner implements GameJoiner {
     public static final int BRICK = 3;
     public static final int ORE = 4;
 
+    //TILES
     private final int MAX_TILES = 37;
     private int columnLocations[]= {3,4,5,2,3,4,5,1,2,4,5,1,2,3,4,1,2,3   ,3,4,5,6,2,6,1,6,0,6,0,5,0,4,0,1,2,3,3};
     private int rowLocations[] =   {1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5   ,0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,6,6,3};
     private int weights []=        {2,3,3,4,4,5,5,6,6,8,8,9,9,10,10,11,11,12  ,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
     private int types []=          {0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,4,4,4, -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-2};
 
+    //VERTEX
     private int xLocations[]     = {3,5,7, 2,4,6,8, 2,4,6,8, 1,3,5,7,9, 1,3,5,7,9, 0,2,4,6,8,10, 0,2,4,6,8,10, 1,3,5,7,9, 1,3,5,7,9, 2,4,6,8, 2,4,6,8,     3,5,7};
     //private //int xLocations[]     = {0,1,2, 0,1,2,3, 0,1,2,3, 0,1,2,3,4, 0,1,2,3,4, 0,1,2,3,4,5, 0,1,2,3,4,5, 0,1,2,3,4, 0,1,2,3,4, 0,1,2,3, 0,1,2,3,     0,1,2};
     private int yLocations[]     = {0,0,0, 1,1,1,1, 2,2,2,2, 3,3,3,3,3, 4,4,4,4,4, 5,5,5,5,5,5, 6,6,6,6,6,6, 7,7,7,7,7, 8,8,8,8,8, 9,9,9,9, 10,10,10,10, 11,11,11};
@@ -37,6 +44,8 @@ public class MapGameJoiner implements GameJoiner {
     private int neighbour2LocY[] = {0,0,0, 1,1,1,1, 1,1,1,1, 2,2,2,2,2, 2,2,2,2,2, 3,3,3,3,3,3, 3,3,3,3,3,3, 4,4,4,4,4, 4,4,4,4,4, 5,5,5,5, 5,5,5,5,     6,6,6};
     private int neighbour3LocX[] = {3,4,5, 2,3,4,5, 2,3,4,5, 1,2,3,4,5, 1,2,3,4,5, 0,1,2,3,4,5, 0,1,2,3,4,5, 0,1,2,3,4, 0,1,2,3,4, 0,1,2,3, 0,1,2,3,     0,1,2};
     private int neighbour3LocY[] = {1,1,1, 1,1,1,1, 2,2,2,2, 2,2,2,2,2, 3,3,3,3,3, 3,3,3,3,3,3, 4,4,4,4,4,4, 4,4,4,4,4, 5,5,5,5,5, 5,5,5,5, 6,6,6,6,     6,6,6};
+
+    //ROADS
 
 
     public MapGameJoiner(TileFactory tileFactory, VertexFactory vertexFactory) {

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InventoryFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Card Game Exam</a> &gt; <a href="index.source.html" class="el_package">com.tfg.game.entities.inventory</a> &gt; <span class="el_source">InventoryFactory.java</span></div><h1>InventoryFactory.java</h1><pre class="source lang-java linenums">package com.tfg.game.entities.inventory;
+
+import com.tfg.game.components.resources.ResourcesController;
+import com.tfg.game.components.elements.ElementsController;
+import com.tfg.game.components.owneds.OwnedsController;
+import com.tfg.game.components.typeds.TypedsController;
+import com.tfg.game.ecs.EntityIdGenerator;
+import com.tfg.game.games.Game;
+import com.tfg.game.players.Player;
+import org.springframework.stereotype.Component;
+
+@Component
+public class InventoryFactory {
+
+    private final EntityIdGenerator entityIdGenerator;
+    private final OwnedsController ownedsController;
+    private final TypedsController typedsController;
+    private final ElementsController elementsController;
+    private final ResourcesController resourcesController;
+
+<span class="fc" id="L21">    public InventoryFactory(EntityIdGenerator entityIdGenerator,  OwnedsController ownedsController, TypedsController typedsController, ElementsController elementsController, ResourcesController resourcesController) {</span>
+<span class="fc" id="L22">        this.entityIdGenerator = entityIdGenerator;</span>
+<span class="fc" id="L23">        this.ownedsController = ownedsController;</span>
+<span class="fc" id="L24">        this.typedsController = typedsController;</span>
+<span class="fc" id="L25">        this.elementsController = elementsController;</span>
+<span class="fc" id="L26">        this.resourcesController = resourcesController;</span>
+<span class="fc" id="L27">    }</span>
+
+    public void buildInventory(Game game, Player owner) {
+<span class="fc" id="L30">        var entityId = entityIdGenerator.nextEntityId(&quot;inventory&quot;);</span>
+<span class="fc" id="L31">        ownedsController.create(entityId, game, owner);</span>
+<span class="fc" id="L32">        typedsController.create(entityId, game, &quot;inventory&quot;);</span>
+<span class="fc" id="L33">        elementsController.create(entityId,game);</span>
+<span class="fc" id="L34">        resourcesController.create(entityId,game);</span>
+<span class="fc" id="L35">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

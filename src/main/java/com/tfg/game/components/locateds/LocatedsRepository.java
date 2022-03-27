@@ -8,5 +8,5 @@ import java.util.List;
 interface LocatedsRepository extends JpaRepository<Located, String> {
     List<Located> findAllByGame(Game game);
 
-    //List<Located> findByRowAndColumn(int row);
+    List<Located> findAllByGameAndXAndY(Game game, int x, int y);
 }

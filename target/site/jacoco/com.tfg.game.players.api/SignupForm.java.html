@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SignupForm.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Card Game Exam</a> &gt; <a href="index.source.html" class="el_package">com.tfg.game.players.api</a> &gt; <span class="el_source">SignupForm.java</span></div><h1>SignupForm.java</h1><pre class="source lang-java linenums">package com.tfg.game.players.api;
+
+import com.tfg.game.common.api.GlobalRestException;
+
+public class SignupForm {
+
+    private String playerName;
+    private String password;
+
+<span class="fc" id="L10">    public SignupForm(String playerName, String password) {</span>
+<span class="fc" id="L11">        this.playerName = playerName;</span>
+<span class="fc" id="L12">        this.password = password;</span>
+<span class="fc" id="L13">    }</span>
+
+    public String getPlayerName() {
+<span class="fc" id="L16">        return playerName;</span>
+    }
+
+    public String getPassword() {
+<span class="fc" id="L20">        return this.password;</span>
+    }
+
+    public void verify() {
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (playerName.equals(&quot;&quot;))</span>
+<span class="fc" id="L25">            throw new GlobalRestException(&quot;Player name should be present&quot;);</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        if (playerName.length() &lt; 3)</span>
+<span class="fc" id="L27">            throw new GlobalRestException(&quot;Player name should be at least three characters long&quot;);</span>
+
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (password.equals(&quot;&quot;))</span>
+<span class="fc" id="L30">            throw new GlobalRestException(&quot;Password should be present&quot;);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (password.length() &lt; 6)</span>
+<span class="fc" id="L32">            throw new GlobalRestException(&quot;Player password should be at least six characters long&quot;);</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        if (!password.matches(&quot;.*\\d.*&quot;))</span>
+<span class="fc" id="L34">            throw new GlobalRestException(&quot;Player password should have at least one number&quot;);</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (!password.matches(&quot;.*[A-Za-z].*&quot;))</span>
+<span class="fc" id="L36">            throw new GlobalRestException(&quot;Player password should have at least one letter&quot;);</span>
+<span class="fc" id="L37">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

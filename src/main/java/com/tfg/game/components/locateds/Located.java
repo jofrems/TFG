@@ -7,19 +7,19 @@ import javax.persistence.Entity;
 
 @Entity
 public class Located extends EcsComponent {
-    private int locX;
-    private int locY;
+    private int x;
+    private int y;
 
     public Located(String entityId, Game game, int locX, int locY ) {
         super(entityId, game);
-        this.locX = locX;
-        this.locY = locY;
+        this.x = locX;
+        this.y = locY;
     }
 
     protected Located() {}
 
     public int getRow() {
-        return this.locX;
+        return this.x;
     }
-    public int getColumn() {return this.locY; }
+    public int getColumn() {return this.y; }
 }

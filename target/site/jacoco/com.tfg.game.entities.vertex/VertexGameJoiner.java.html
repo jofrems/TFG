@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VertexGameJoiner.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Card Game Exam</a> &gt; <a href="index.source.html" class="el_package">com.tfg.game.entities.vertex</a> &gt; <span class="el_source">VertexGameJoiner.java</span></div><h1>VertexGameJoiner.java</h1><pre class="source lang-java linenums">package com.tfg.game.entities.vertex;
+
+import com.tfg.game.games.Game;
+import com.tfg.game.games.GameJoiner;
+import com.tfg.game.players.Player;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+
+@Component
+public class VertexGameJoiner  implements GameJoiner{
+    private final VertexFactory vertexFactory;
+
+    //DELETE IF MAPGAMEJOINER WORKS
+
+<span class="fc" id="L16">    private int xLocations[]     = {0,1,2, 0,1,2,3, 0,1,2,3, 0,1,2,3,4, 0,1,2,3,4, 0,1,2,3,4,5, 0,1,2,3,4,5, 0,1,2,3,4, 0,1,2,3,4, 0,1,2,3, 0,1,2,3,     0,1,2};</span>
+<span class="fc" id="L17">    private int yLocations[]     = {0,0,0, 1,1,1,1, 2,2,2,2, 3,3,3,3,3, 4,4,4,4,4, 5,5,5,5,5,5, 6,6,6,6,6,6, 7,7,7,7,7, 8,8,8,8,8, 9,9,9,9, 10,10,10,10, 11,11,11};</span>
+<span class="fc" id="L18">    private int neighbour1LocX[] = {3,4,5, 3,4,5,6, 2,3,4,5, 2,3,4,5,6, 1,2,3,4,5, 1,2,3,4,5,6, 0,1,2,3,4,5, 1,2,3,4,5, 0,1,2,3,4, 1,2,3,4, 0,1,2,3,     1,2,3};</span>
+<span class="fc" id="L19">    private int neighbour1LocY[] = {0,0,0, 0,0,0,0, 1,1,1,1, 1,1,1,1,1, 2,2,2,2,2, 2,2,2,2,2,2, 3,3,3,3,3,3, 3,3,3,3,3, 4,4,4,4,4, 4,4,4,4, 5,5,5,5,     5,5,5};</span>
+<span class="fc" id="L20">    private int neighbour2LocX[] = {4,5,6, 3,4,5,6, 3,3,5,6, 2,3,4,5,6, 2,3,4,5,6, 1,2,3,4,5,6, 1,2,3,4,5,6, 1,2,3,4,5, 1,2,3,4,5, 1,2,3,4, 1,2,3,4,     1,2,3};</span>
+<span class="fc" id="L21">    private int neighbour2LocY[] = {0,0,0, 1,1,1,1, 1,1,1,1, 2,2,2,2,2, 2,2,2,2,2, 3,3,3,3,3,3, 3,3,3,3,3,3, 4,4,4,4,4, 4,4,4,4,4, 5,5,5,5, 5,5,5,5,     6,6,6};</span>
+<span class="fc" id="L22">    private int neighbour3LocX[] = {3,4,5, 2,3,4,5, 2,3,4,5, 1,2,3,4,5, 1,2,3,4,5, 0,1,2,3,4,5, 0,1,2,3,4,5, 0,1,2,3,4, 0,1,2,3,4, 0,1,2,3, 0,1,2,3,     0,1,2};</span>
+<span class="fc" id="L23">    private int neighbour3LocY[] = {1,1,1, 1,1,1,1, 2,2,2,2, 2,2,2,2,2, 3,3,3,3,3, 3,3,3,3,3,3, 4,4,4,4,4,4, 4,4,4,4,4, 5,5,5,5,5, 5,5,5,5, 6,6,6,6,     6,6,6};</span>
+
+<span class="fc" id="L25">    public VertexGameJoiner(VertexFactory vertexFactory) {</span>
+<span class="fc" id="L26">        this.vertexFactory = vertexFactory;</span>
+
+<span class="fc" id="L28">    }</span>
+
+    @Override
+    public void joinGame(Player owner, Game game) {
+      /*  for (int i = 0; i &lt; xLocations.length; i++){
+            vertexFactory.buildVertex();
+        }*/
+<span class="fc" id="L35">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TileFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Card Game Exam</a> &gt; <a href="index.source.html" class="el_package">com.tfg.game.entities.tile</a> &gt; <span class="el_source">TileFactory.java</span></div><h1>TileFactory.java</h1><pre class="source lang-java linenums">package com.tfg.game.entities.tile;
+
+import com.tfg.game.components.locateds.LocatedsController;
+import com.tfg.game.components.owneds.OwnedsController;
+import com.tfg.game.components.tileType.TileTypeController;
+import com.tfg.game.components.tileWeight.TileWeightController;
+import com.tfg.game.components.typeds.TypedsController;
+import com.tfg.game.ecs.EntityIdGenerator;
+import com.tfg.game.games.Game;
+import com.tfg.game.players.Player;
+import org.springframework.stereotype.Component;
+
+@Component
+public class TileFactory {
+
+    private final EntityIdGenerator entityIdGenerator;
+    private final TypedsController typedsController;
+    private final OwnedsController ownedsController;
+    private final TileTypeController tileTypeController;
+    private final TileWeightController tileWeightController;
+    private final LocatedsController positionController;
+
+
+<span class="fc" id="L24">    public TileFactory(EntityIdGenerator entityIdGenerator, TypedsController typedsController, OwnedsController ownedsController, TileWeightController tileWeightController, TileTypeController tileTypeController, LocatedsController positionController) {</span>
+<span class="fc" id="L25">        this.entityIdGenerator = entityIdGenerator;</span>
+<span class="fc" id="L26">        this.typedsController = typedsController;</span>
+<span class="fc" id="L27">        this.ownedsController = ownedsController;</span>
+<span class="fc" id="L28">        this.tileWeightController = tileWeightController;</span>
+<span class="fc" id="L29">        this.tileTypeController = tileTypeController;</span>
+<span class="fc" id="L30">        this.positionController = positionController;</span>
+<span class="fc" id="L31">    }</span>
+
+    public void buildTile(Game game, Player owner, int tileType, int weight, int row, int column) {
+<span class="fc" id="L34">        var entityId = entityIdGenerator.nextEntityId(&quot;tile&quot;);</span>
+<span class="fc" id="L35">        typedsController.create(entityId, game, &quot;tile&quot;);</span>
+<span class="fc" id="L36">        ownedsController.create(entityId, game);</span>
+<span class="fc" id="L37">        tileTypeController.create(entityId,game, tileType);</span>
+<span class="fc" id="L38">        tileWeightController.create(entityId,game, weight);</span>
+<span class="fc" id="L39">        positionController.create(entityId, game, row, column);</span>
+<span class="fc" id="L40">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

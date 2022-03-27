@@ -54,7 +54,7 @@ export function VertexComponent({ entity }: any) {
 
     //generem un color pel jugador aleatoriament
     var colour= '#';
-     // this is NOT a great hash but serves as an example
+
     if(entity.owner != null){
         var hash = 0;
         for (var i = 0; i < entity.owner!.length; i++) {
