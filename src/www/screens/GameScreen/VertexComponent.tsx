@@ -48,8 +48,8 @@ export function VertexComponent({ entity }: any) {
     if(entity.column > 9)
         yOffset = yOffset + 50;
     
-    var xPos = xOffset;
-    var yPos = yOffset -70;
+    var xPos = xOffset + 290;
+    var yPos = yOffset -275;
     var entityId = entity.id;
 
     //generem un color pel jugador aleatoriament

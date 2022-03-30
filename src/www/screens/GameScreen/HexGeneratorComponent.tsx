@@ -1,5 +1,6 @@
 import { HexComponent } from "./HexComponent";
 import { VertexComponent } from "./VertexComponent";
+import { RoadComponent } from "./RoadComponent";
 
 
 export function HexGeneratorComponent({ entities }: any) {
@@ -10,7 +11,14 @@ export function HexGeneratorComponent({ entities }: any) {
                     return <HexComponent key={entity.id} entity={entity} />
                 else if(entity.type ==="vertex")
                     return <VertexComponent key={entity.id} entity={entity}  />
-                
+
+                return <></>
+            })}
+
+            {entities.map((entity: any) => {
+                if(entity.type ==="road")
+                    return <RoadComponent key={entity.id} entity={entity}  />
+
                 return <></>
             })}
         </svg>

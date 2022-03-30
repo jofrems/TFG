@@ -2,22 +2,20 @@ package com.tfg.game.entities;
 
 import com.tfg.game.entities.tile.TileFactory;
 import com.tfg.game.entities.vertex.VertexFactory;
+import com.tfg.game.entities.road.RoadFactory;
+
 
 import com.tfg.game.games.Game;
 import com.tfg.game.games.GameJoiner;
 import com.tfg.game.players.Player;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.function.EntityResponse;
-
-import java.util.Optional;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 @Component
 public class MapGameJoiner implements GameJoiner {
 
     private final TileFactory tileFactory;
     private final VertexFactory vertexFactory;
+    private final RoadFactory roadFactory;
 
     public static final int SEA = -1;
     public static final int DESSERT = -2;
@@ -46,11 +44,13 @@ public class MapGameJoiner implements GameJoiner {
     private int neighbour3LocY[] = {1,1,1, 1,1,1,1, 2,2,2,2, 2,2,2,2,2, 3,3,3,3,3, 3,3,3,3,3,3, 4,4,4,4,4,4, 4,4,4,4,4, 5,5,5,5,5, 5,5,5,5, 6,6,6,6,     6,6,6};
 
     //ROADS
-
-
-    public MapGameJoiner(TileFactory tileFactory, VertexFactory vertexFactory) {
+    //private int xLocationsRoads[] = {0,1,2,3,4,5, 0,1,2,3, 0,1,2,3,4,5,6,7, 0,1,2,3,4, 0,1,2,3,4,5,6,7,8,9, 0,1,2,3,4,5, 0,1,2,3,4,5,6,7,8,9, 0,1,2,3,4, 0,1,2,3,4,5,6,7, 0,1,2,3, 0,1,2,3,4,5};
+    private int xLocationsRoads[] = {5,7,9,11,13,15, 4,8,12,16, 3,5,7,9,11,13,15,17, 2,6,10,14,18, 1,3,5,7,9,11,13,15,17,19, 0,4,8,12,16,20, 1,3,5,7,9,11,13,15,17,19, 2,6,10,14,18, 3,5,7,9,11,13,15,17, 4,8,12,16, 5,7,9,11,13,15};
+    private int yLocationsRoads[] = {0,0,0,0 ,0 ,0,  1,1,1 ,1,  2,2,2,2,2 ,2 ,2 ,2,  3,3,3 ,3 ,3,  4,4,4,4,4,4 ,4 ,4 ,4 ,4 , 5,5,5,5 ,5 ,5 , 6,6,6,6,6,6 ,6 ,6 ,6 ,6 , 7,7,7 ,7 ,7 , 8,8,8,8,8 ,8 ,8  ,8, 9,9,9 ,9 , 10,10,10,10,10,10};
+    public MapGameJoiner(TileFactory tileFactory, VertexFactory vertexFactory, RoadFactory roadFactory) {
         this.tileFactory = tileFactory;
         this.vertexFactory = vertexFactory;
+        this.roadFactory = roadFactory;
     }
 
     @Override
@@ -63,6 +63,10 @@ public class MapGameJoiner implements GameJoiner {
        for(int i = 0; i < xLocations.length; i++){
             vertexFactory.buildVertex(game, owner,xLocations[i], yLocations[i], findTileWeightGivenTilePosition(neighbour1LocX[i], neighbour1LocY[i]), findTileTypeGivenTilePosition(neighbour1LocX[i], neighbour1LocY[i]), findTileWeightGivenTilePosition(neighbour2LocX[i], neighbour2LocY[i]), findTileTypeGivenTilePosition(neighbour2LocX[i], neighbour2LocY[i]),findTileWeightGivenTilePosition(neighbour3LocX[i], neighbour3LocY[i]),findTileTypeGivenTilePosition(neighbour3LocX[i], neighbour3LocY[i]));
         }
+
+       for (int i=0; i < xLocationsRoads.length; i++){
+           roadFactory.buildRoad(game, xLocationsRoads[i], yLocationsRoads[i]);
+       }
     }
 
     public int findTileTypeGivenTilePosition(int x, int y){
