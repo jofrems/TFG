@@ -61,21 +61,9 @@ transform: rotate(-30deg);
 
 const WestEastRoad = styled.rect`
 cursor: pointer;
-fill-opacity: 0;
-stroke: #000;
-stroke-width: 0;
-transition: transform, fill-opacity, stroke-width;
--webkit-transition: transform, fill-opacity, stroke-width;
-transition-duration: 1s;
--webkit-transition-duration: 1s;;
 transform-box: fill-box;
 transform-origin: center;
 transform: rotate(90deg);
-&:hover{
-  fill-opacity: 1;
-  stroke: #ff0000;
-  stroke-width: 5;
-}
 `
 
 /*transform-box: fill-box;
@@ -85,8 +73,8 @@ transform: rotate(45deg);*/
 
 
 export function RoadComponent({ entity }: any) { 
-  //const currentPlayer = useAppSelector(getPlayerName);
-  //const owned = useDispatchFormBig(own, entity.id, currentPlayer);
+  const currentPlayer = useAppSelector(getPlayerName);
+  const owned = useDispatchFormBig(own, entity.id, currentPlayer);
 
   if(entity.type !== "road") return null;
 
@@ -100,7 +88,7 @@ export function RoadComponent({ entity }: any) {
     var yPos = yOffset-270;
     var entityId = entity.id;
 
-   /* //generem un color pel jugador aleatoriament
+    //generem un color pel jugador aleatoriament
     var colour= '#';
 
     if(entity.owner != null){
@@ -115,7 +103,7 @@ export function RoadComponent({ entity }: any) {
     }else{
         colour = "white"
     }
-    */
+    
    if(entity.column ===0)
     console.log(entity.row);
     if(entity.column === 2 || entity.column === 6 || entity.column === 10){
@@ -123,19 +111,19 @@ export function RoadComponent({ entity }: any) {
             console.log("im innnnn");
             return (
                 <g id="road">
-                    <WestRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width="3" fill="white" ></WestRoad>
+                    <WestRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width={entity.owner != null ? 10 : 3} fill={colour} onClick={owned}></WestRoad>
                 </g>    
             );
         }else if(entity.row=== 1 ||  entity.row === 5 || entity.row === 9 || entity.row === 13|| entity.row === 17){
                 return (
                     <g id="road">
-                      <EastRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width="3" fill="white" ></EastRoad>
+                      <EastRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width={entity.owner != null ? 10 : 3} fill={colour} onClick={owned}></EastRoad>
                     </g>    
                 );
         }else{
                 return (
                     <g id="road">
-                      <Road id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width="3" fill="white" ></Road>
+                      <Road id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width={entity.owner != null ? 10 : 3}fill={colour} onClick={owned}></Road>
                     </g>    
                 );
         }
@@ -144,33 +132,33 @@ export function RoadComponent({ entity }: any) {
             console.log("im innnnn");
             return (
                 <g id="road">
-                    <EastRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width="3" fill="white" ></EastRoad>
+                    <EastRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width={entity.owner != null ? 10 : 3} fill={colour} onClick={owned}></EastRoad>
                 </g>    
             );
             }else if(entity.row=== 1 ||  entity.row === 5 || entity.row === 9 || entity.row === 13 || entity.row === 17){
                 return (
                     <g id="road">
-                      <WestRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width="3" fill="white" ></WestRoad>
+                      <WestRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width={entity.owner != null ? 10 : 3}fill={colour} onClick={owned}></WestRoad>
                     </g>    
                 );
             }else{
                 return (
                     <g id="road">
-                      <Road id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width="3" fill="white" ></Road>
+                      <Road id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width={entity.owner != null ? 10 : 3} fill={colour} onClick={owned}></Road>
                     </g>    
                 );
             }
     }else if (entity.column % 2 ===1){
         return (
             <g id="road">
-                <WestEastRoad id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width="3" fill="white" ></WestEastRoad>
+                <WestEastRoad id={entityId} x={xPos} y={yPos} width="80" height="20"  stroke={entity.owner != null ? "black" : "red"} strokeWidth={entity.owner != null ? 3 : 0  } fill={entity.owner != null ? colour : "white"} fillOpacity={entity.owner != null ? 1 : 0} onClick={owned} ></WestEastRoad>
             </g> 
         );
     }
     else{
         return (
             <g id="road">
-              <Road id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width="3" fill="white" ></Road>
+              <Road id={entityId} x={xPos} y={yPos} width="80" height="20" stroke="black" stroke-width={entity.owner != null ? 10 : 3} fill={colour} onClick={owned}></Road>
             </g>    
         );
     }

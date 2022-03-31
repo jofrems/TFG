@@ -9,16 +9,14 @@ export function HexGeneratorComponent({ entities }: any) {
             {entities.map((entity: any) => {
                 if(entity.type === "tile")
                     return <HexComponent key={entity.id} entity={entity} />
-                else if(entity.type ==="vertex")
-                    return <VertexComponent key={entity.id} entity={entity}  />
-
                 return <></>
             })}
 
             {entities.map((entity: any) => {
                 if(entity.type ==="road")
                     return <RoadComponent key={entity.id} entity={entity}  />
-
+                else if(entity.type ==="vertex")
+                    return <VertexComponent key={entity.id} entity={entity}  />
                 return <></>
             })}
         </svg>
