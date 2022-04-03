@@ -27,6 +27,7 @@ public class PartnershipEntityDataGenerator implements EntityPublicDataGenerator
             var entityId = component.getEntityId();
             data.putEntityProperty(entityId, "partnership1", component.getPartnership1());
             data.putEntityProperty(entityId, "partnership2", component.getPartnership2());
+            data.putEntityProperty(entityId, "partnership3", component.getPartnership3());
         }
     }
 }

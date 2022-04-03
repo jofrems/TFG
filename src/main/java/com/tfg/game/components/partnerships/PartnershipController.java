@@ -18,4 +18,15 @@ public class PartnershipController {
         var component = new Partnership(entityId, game, p1, p2);
         partnershipRepository.save(component);
     }
+
+    public void createEmpty(String entityId, Game game){
+        var component = new Partnership(entityId, game);
+        partnershipRepository.save(component);
+    }
+
+    public void update(String entityId, String partnership){
+        var component = partnershipRepository.findById(entityId).get();
+        component.updatePartnership(partnership);
+        partnershipRepository.save(component);
+    }
 }
