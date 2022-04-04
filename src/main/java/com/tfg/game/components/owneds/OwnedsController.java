@@ -37,4 +37,8 @@ public class OwnedsController {
         ownedsRepository.save(owned);
         return owned;
     }
+
+    public Owned own(String entityId) {
+        return ownedsRepository.findById(entityId).get();
+    }
 }

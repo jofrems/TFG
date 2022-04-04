@@ -15,10 +15,10 @@ public class Resources extends EcsComponent{
 
     public Resources(String entityId, Game game) {
         super(entityId, game);
-        this.brick = 0;
-        this.lumber = 0;
-        this.wool = 0;
-        this.grain = 0;
+        this.brick = 2;
+        this.lumber = 2;
+        this.wool = 2;
+        this.grain = 2;
         this.ore = 0;
     }
 
