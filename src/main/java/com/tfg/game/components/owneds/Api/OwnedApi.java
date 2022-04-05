@@ -35,7 +35,13 @@ public class OwnedApi {
         var inventoryId = ownedsController.findAllByGameAndOwner(ownedTest.getGame(), player).stream()
                     .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
 
-        var resources = resourcesController.ownTown(inventoryId);
+        var isVertex = typedsController.isTyped(entityId,"vertex");
+
+        boolean resources;
+        if(isVertex)
+            resources = resourcesController.ownTown(inventoryId);
+        else
+            resources = resourcesController.ownRoad(inventoryId);
 
         if(resources) {
             var owned = ownedsController.own(entityId, player);
