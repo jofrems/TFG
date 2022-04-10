@@ -18,4 +18,5 @@ public class InventoryGameJoiner implements GameJoiner {
     public void joinGame(Player owner, Game game) {
         inventoryFactory.buildInventory(game, owner);
     }
+
 }

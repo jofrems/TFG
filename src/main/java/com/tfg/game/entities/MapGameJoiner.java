@@ -6,16 +6,17 @@ import com.tfg.game.entities.road.RoadFactory;
 
 
 import com.tfg.game.games.Game;
-import com.tfg.game.games.GameJoiner;
+import com.tfg.game.games.MGameJoiner;
 import com.tfg.game.players.Player;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MapGameJoiner implements GameJoiner {
+public class MapGameJoiner implements MGameJoiner {
 
     private final TileFactory tileFactory;
     private final VertexFactory vertexFactory;
     private final RoadFactory roadFactory;
+
 
     public static final int SEA = -1;
     public static final int DESSERT = -2;
@@ -72,6 +73,7 @@ public class MapGameJoiner implements GameJoiner {
        for (int i=0; i < xLocationsRoads.length; i++){
            roadFactory.buildRoad(game, xLocationsRoads[i], yLocationsRoads[i],adjVertex1LocX[i], adjVertex1LocY[i], adjVertex2LocX[i],adjVertex2LocY[i]);
        }
+
     }
 
     public int findTileTypeGivenTilePosition(int x, int y){

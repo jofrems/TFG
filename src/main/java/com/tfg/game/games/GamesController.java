@@ -13,11 +13,13 @@ public class GamesController {
     private final GameRepository gameRepository;
     private final List<GameJoiner> gameJoiners;
     private final List<EcsSystem> gameRounders;
+    private final List<MGameJoiner>mGameJoiners;
 
-    public GamesController(GameRepository gameRepository, List<GameJoiner> gameJoiners, List<EcsSystem> gameRounders) {
+    public GamesController(GameRepository gameRepository, List<GameJoiner> gameJoiners, List<EcsSystem> gameRounders, List<MGameJoiner> mGameJoiners) {
         this.gameRepository = gameRepository;
         this.gameJoiners = gameJoiners;
         this.gameRounders = gameRounders;
+        this.mGameJoiners = mGameJoiners;
         this.gameRounders.sort((a, b) -> {
             return a.getClass().getSimpleName().compareTo(b.getClass().getSimpleName());
         });
@@ -29,6 +31,7 @@ public class GamesController {
 
         var game = new Game(id, gameName, player);
         joinGame(player, game);
+        joinMap(player, game);
 
         return Optional.of(game);
     }
@@ -45,8 +48,12 @@ public class GamesController {
     private void joinGame(Player player, Game game) {
         game.joinPlayer(player);
         gameRepository.save(game);
-
         gameJoiners.stream().forEach(gj -> gj.joinGame(player, game));
+
+    }
+
+    private void joinMap(Player player, Game game){
+        mGameJoiners.stream().forEach(gj -> gj.joinGame(player, game));
     }
 
     public void endRound(String gameName, Player creatorPlayer) {

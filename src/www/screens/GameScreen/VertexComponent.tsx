@@ -6,6 +6,13 @@ import { own } from "../../components/OwnComponent/actions";
 
 const Vertex = styled.circle`
 cursor: pointer;
+`
+
+const UpgradedVertex = styled.rect`
+cursor: pointer;
+`
+
+/*
 fill-opacity: 0.4;
 stroke: #000;
 stroke-width: 1;
@@ -18,7 +25,7 @@ transition-duration: 1s;
   stroke: #ff0000;
   stroke-width: 5;
 }
-`
+*/
 //transform-origin: 50% 50%;
 
 //transform: rotate(30deg);
@@ -68,10 +75,18 @@ export function VertexComponent({ entity }: any) {
         colour = "white"
     }
     
-
+  if(entity.upgraded){
+    xPos = xPos-20;
+    yPos = yPos -20;
+    return (
+        <g id="vertex">
+          <UpgradedVertex id={entityId} x={xPos} y={yPos} width="40" height="40" stroke="black" stroke-width="3" fill={colour}  onClick={owned}></UpgradedVertex>
+        </g>    
+    ); 
+  }
   return (
       <g id="vertex">
-        <Vertex id={entityId} cx={xPos} cy={yPos} r="20" stroke="black" stroke-width="3" fill={colour}  onClick={owned}></Vertex>
+        <Vertex id={entityId} cx={xPos} cy={yPos} r="20" stroke="black" stroke-width="3" strokeWidth={entity.owner != null ? 3 : 0  } fill={entity.owner != null ? colour : "white"} fillOpacity={entity.owner != null ? 1 : 0} onClick={owned}></Vertex>
       </g>    
   );
 }

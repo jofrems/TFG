@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-interface GameRepository extends JpaRepository<Game, String> {
+public interface GameRepository extends JpaRepository<Game, String> {
     List<Game> findByCreator(Player creator);
 }

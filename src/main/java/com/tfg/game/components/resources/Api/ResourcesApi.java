@@ -1,4 +1,4 @@
-package com.tfg.game.components.owneds.Api;
+package com.tfg.game.components.resources.Api;
 
 
 import com.tfg.game.components.owneds.OwnedsController;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("api/v1/owned")
-public class OwnedApi {
+@RequestMapping("api/v1/resources")
+public class ResourcesApi {
     private final OwnedsController ownedsController;
     private final PlayersController playersController;
     private final ResourcesController resourcesController;
@@ -21,7 +21,7 @@ public class OwnedApi {
     private final UpgradedsController upgradedsController;
     private final GamesApi gamesApi;
 
-    public OwnedApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, GamesApi gamesApi) {
+    public ResourcesApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, GamesApi gamesApi) {
         this.ownedsController = ownedsController;
         this.playersController = playersController;
         this.resourcesController = resourcesController;
@@ -30,7 +30,7 @@ public class OwnedApi {
         this.gamesApi = gamesApi;
     }
 
-    @PostMapping("{entityId}/{playerName}/own")
+    @PostMapping("{entityId}/{playerName}/resources")
     public GameData Own(@PathVariable String entityId, @PathVariable String playerName, @RequestParam String token){
         var player = playersController.findPlayer(playerName).get();
         var ownedTest = ownedsController.own(entityId);
@@ -45,23 +45,12 @@ public class OwnedApi {
         if(isVertex) {
             if(!isOwned)
                 resources = resourcesController.ownTown(inventoryId);
-            else {
-                var isDifferentPlayer = ownedTest.getOwner().getPlayerName() != playerName ? true : false;
-
-                if(isDifferentPlayer)
-                    resources = resourcesController.ownCity(inventoryId, false);
-                else
-                    resources = resourcesController.ownCity(inventoryId, true);
-
-            }
-        }
-        else {
-            if(isOwned)
-                resources = resourcesController.ownRoad(inventoryId, false);
             else
-                resources = resourcesController.ownRoad(inventoryId, true);
-
+                resources = resourcesController.ownCity(inventoryId, true);
         }
+        else
+            resources = resourcesController.ownRoad(inventoryId, true);
+
         if(resources) {
             if(isVertex && isOwned){
                 var upgraded = upgradedsController.upgrade(entityId, true);
