@@ -45,10 +45,10 @@ When the game starts, each player gets some resources in their planets.
  <!-- SNAPSHOT status=200 -->  
  * "leonard" should be the current player.
  * Game round should be 1.
- * There should be 2 lumber in the inventory.
+ * There should be 4 lumber in the inventory.
 
 ### See brick
- * There should be 2 brick in the inventory.
+ * There should be 4 brick in the inventory.
 
 ### See wool
  * There should be 2 wool in the inventory.

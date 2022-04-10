@@ -60,7 +60,6 @@ public class OwnedApi {
                 resources = resourcesController.ownRoad(inventoryId, false);
             else
                 resources = resourcesController.ownRoad(inventoryId, true);
-
         }
         if(resources) {
             if(isVertex && isOwned){
