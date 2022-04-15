@@ -19,7 +19,9 @@ public class ResourcesController {
         resourcesRepository.save(component);
     }
 
-    public boolean ownTown(String entityId){
+    public boolean ownTown(String entityId, boolean shouldOwnTown){
+        if(!shouldOwnTown) return false;
+
         var component = resourcesRepository.findById(entityId).get();
         if(component.getBrick() > 0 && component.getGrain() > 0 && component.getLumber() > 0 && component.getWool() > 0){
             component.incOrDecBrick(1,false);

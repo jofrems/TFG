@@ -44,7 +44,7 @@ public class ResourcesApi {
         boolean resources;
         if(isVertex) {
             if(!isOwned)
-                resources = resourcesController.ownTown(inventoryId);
+                resources = resourcesController.ownTown(inventoryId, true);
             else
                 resources = resourcesController.ownCity(inventoryId, true);
         }

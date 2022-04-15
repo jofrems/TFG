@@ -17,8 +17,8 @@ public class Resources extends EcsComponent{
         super(entityId, game);
         this.brick = 20; //was 4
         this.lumber = 20; //was 4
-        this.wool = 2; //was 2
-        this.grain = 2; //was 2
+        this.wool = 4; //was 2
+        this.grain = 4; //was 2
         this.ore = 0; //was 0
     }
 
