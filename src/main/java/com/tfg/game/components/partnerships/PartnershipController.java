@@ -29,4 +29,8 @@ public class PartnershipController {
         component.updatePartnership(partnership);
         partnershipRepository.save(component);
     }
+
+    public Partnership getPartnership(String entityId){
+        return partnershipRepository.findById(entityId).get();
+    }
 }
