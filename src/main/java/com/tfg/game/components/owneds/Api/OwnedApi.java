@@ -1,6 +1,7 @@
 package com.tfg.game.components.owneds.Api;
 
 
+import com.tfg.game.components.elements.ElementsController;
 import com.tfg.game.components.owneds.OwnedsController;
 import com.tfg.game.components.partnerships.PartnershipController;
 import com.tfg.game.components.resources.ResourcesController;
@@ -21,15 +22,17 @@ public class OwnedApi {
     private final TypedsController typedsController;
     private final UpgradedsController upgradedsController;
     private final PartnershipController partnershipController;
+    private final ElementsController elementsController;
     private final GamesApi gamesApi;
 
-    public OwnedApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, PartnershipController partnershipController, GamesApi gamesApi) {
+    public OwnedApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, PartnershipController partnershipController, ElementsController elementsController, GamesApi gamesApi) {
         this.ownedsController = ownedsController;
         this.playersController = playersController;
         this.resourcesController = resourcesController;
         this.typedsController = typedsController;
         this.upgradedsController = upgradedsController;
         this.partnershipController = partnershipController;
+        this.elementsController = elementsController;
         this.gamesApi = gamesApi;
     }
 
@@ -53,6 +56,7 @@ public class OwnedApi {
         var partner2Partnership = partnershipController.getPartnership(partnership.getPartnership2());
         var partner3Partnership = isOwnedNeighbour3BySamePlayer == null ? null : partnershipController.getPartnership(partnership.getPartnership3());
 
+        var isOwnedNeighbour3BySamePlayerSave = isOwnedNeighbour3BySamePlayer == null ? false : isOwnedNeighbour3BySamePlayer == true ? true :false;
         //needed for vertex bussiness rules
         var isOwnedNeighbour1Vertex1 = ownedsController.own(partner1Partnership.getPartnership1()).getOwner() != null ?  true : false;
         var isOwnedNeighbour1Vertex2 = ownedsController.own(partner1Partnership.getPartnership2()).getOwner() != null ?  true : false;
@@ -91,23 +95,27 @@ public class OwnedApi {
                 .filter(c -> typedsController.isTyped(c.getEntityId(), "vertex")).count();
 
         boolean resources;
+        boolean elements;
         if(isVertex) {
 
-            if(!isOwned)
-                if(((isOwnedNeighbour1BySamePlayer || isOwnedNeighbour2BySamePlayer || isOwnedNeighbour3BySamePlayer) &&
-                                (!isOwnedNeighbour1Vertex1 && !isOwnedNeighbour1Vertex2 && !isOwnedNeighbour2Vertex1 && !isOwnedNeighbour2Vertex2 && !isOwnedNeighbour3Vertex1 && !isOwnedNeighbour3Vertex2)) ||
-                        (howManyVertexOwnedByPlayer < 2 && (!isOwnedNeighbour1Vertex1 && !isOwnedNeighbour1Vertex2 && !isOwnedNeighbour2Vertex1 && !isOwnedNeighbour2Vertex2 && !isOwnedNeighbour3Vertex1 && !isOwnedNeighbour3Vertex2)))
+            if(!isOwned) {
+                if (((isOwnedNeighbour1BySamePlayer || isOwnedNeighbour2BySamePlayer || isOwnedNeighbour3BySamePlayerSave) &&
+                        (!isOwnedNeighbour1Vertex1 && !isOwnedNeighbour1Vertex2 && !isOwnedNeighbour2Vertex1 && !isOwnedNeighbour2Vertex2 && !isOwnedNeighbour3Vertex1 && !isOwnedNeighbour3Vertex2)) ||
+                        (howManyVertexOwnedByPlayer < 2 && (!isOwnedNeighbour1Vertex1 && !isOwnedNeighbour1Vertex2 && !isOwnedNeighbour2Vertex1 && !isOwnedNeighbour2Vertex2 && !isOwnedNeighbour3Vertex1 && !isOwnedNeighbour3Vertex2))) {
                     resources = resourcesController.ownTown(inventoryId, true);
-                else
+                } else {
                     resources = resourcesController.ownTown(inventoryId, false);
-
-            else {
+                }
+                elements = elementsController.ownTown(inventoryId, resources);
+            }else {
                 var isDifferentPlayer = ownedTest.getOwner().getPlayerName() != playerName ? true : false;
 
-                if(isDifferentPlayer)
+                if(isDifferentPlayer) {
                     resources = resourcesController.ownCity(inventoryId, false);
-                else
+                }else {
                     resources = resourcesController.ownCity(inventoryId, true);
+                }
+                elements = elementsController.ownCity(inventoryId, resources);
 
             }
         }
@@ -123,8 +131,9 @@ public class OwnedApi {
                     resources = resourcesController.ownRoad(inventoryId, false);
 
             }
+            elements = elementsController.ownRoad(inventoryId, resources);
         }
-        if(resources) {
+        if(elements) {
             if(isVertex && isOwned){
                 var upgraded = upgradedsController.upgrade(entityId, true);
                 var game = upgraded.getGame();

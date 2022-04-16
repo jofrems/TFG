@@ -21,4 +21,35 @@ public class ElementsController {
         var component = new Elements(entityId, game);
         elementsRepository.save(component);
     }
+
+    public boolean ownTown(String entityId, boolean shouldOwnTown){
+        var component = elementsRepository.findById(entityId).get();
+        if(!shouldOwnTown || component.getTowns() <= 0) return false;
+
+        component.decreaseTowns();
+        elementsRepository.save(component);
+
+        return true;
+    }
+
+    public boolean ownCity(String entityId, boolean shouldOwnCity){
+        var component = elementsRepository.findById(entityId).get();
+        if(!shouldOwnCity || component.getCities() <= 0) return false;
+
+        component.decreaseCities();
+        component.increaseTowns();
+        elementsRepository.save(component);
+
+        return true;
+    }
+
+    public boolean ownRoad(String entityId, boolean shouldOwnRoad){
+        var component = elementsRepository.findById(entityId).get();
+        if(!shouldOwnRoad || component.getRoads() <= 0) return false;
+
+        component.decreaseRoads();
+        elementsRepository.save(component);
+
+        return true;
+    }
 }

@@ -32,18 +32,19 @@ public class Elements extends EcsComponent{
         return this.cities;
     }
 
-    public int decreaseRoads(){
+    public void decreaseRoads(){
         this.roads--;
-        return this.roads;
     }
 
-    public int decreaseTowns(){
+    public void decreaseTowns(){
         this.towns--;
-        return this.towns;
     }
 
-    public int decreaseCities(){
+    public void increaseTowns(){
+        this.towns++;
+    }
+
+    public void decreaseCities(){
         this.cities--;
-        return this.cities;
     }
 }

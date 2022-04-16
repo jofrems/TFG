@@ -1,17 +1,15 @@
-import { useCallback } from "react";
-import { useAppDispatch } from "www/store/hooks";
-import { screenPushed } from "www/widgets/ScreenStackWidget/actions";
+import { getPlayerName } from "www/store/player/selectors";
+import { useAppSelector } from "www/store/hooks";
+import { EntityComponents } from "./EntityComponents";
 
-export function EntityListItem({ entity }: any) {
-  const dispatch = useAppDispatch();
-  const go = useCallback(
-    () => dispatch(screenPushed("entity", entity.id)),
-    [dispatch, entity]
-  );
 
+export function EntityListItem({ entity }: any) { 
+
+  const currentPlayer = useAppSelector(getPlayerName);
+  if(currentPlayer !== entity.owner || entity.type !== 'inventory'){
+        return null;
+  }
   return (
-    <li onClick={go}>
-      {entity.type}: {entity.name} of {entity.owner}
-    </li>
+     <EntityComponents entity={entity}/>
   );
 }
