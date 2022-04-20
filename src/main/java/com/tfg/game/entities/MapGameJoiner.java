@@ -1,5 +1,6 @@
 package com.tfg.game.entities;
 
+import com.tfg.game.entities.dices.DicesFactory;
 import com.tfg.game.entities.tile.TileFactory;
 import com.tfg.game.entities.vertex.VertexFactory;
 import com.tfg.game.entities.road.RoadFactory;
@@ -16,7 +17,7 @@ public class MapGameJoiner implements MGameJoiner {
     private final TileFactory tileFactory;
     private final VertexFactory vertexFactory;
     private final RoadFactory roadFactory;
-
+    private final DicesFactory dicesFactory;
 
     public static final int SEA = -1;
     public static final int DESSERT = -2;
@@ -53,14 +54,17 @@ public class MapGameJoiner implements MGameJoiner {
     private int adjVertex2LocX[] =  {2,4,4,6 ,6 ,8,  2,4,6 ,8,  1,3,3,5,5 ,7 ,7 ,9,  1,3,5 ,7 ,9,  0,2,2,4,4,6 ,6 ,8 ,8 ,10, 0,2,4,6 ,8 ,10 ,1,1,3,3,5,5 ,7 ,7 ,9 ,9 , 1,3,5 ,7 ,9 , 2,2,4,4,6 ,6 ,8 ,8 , 2 ,4  ,6 ,8 , 3 ,3 ,5 ,5 ,7 ,7};
     private int adjVertex2LocY[] =  {1,1,1,1 ,1 ,1,  2,2,2 ,2,  3,3,3,3,3 ,3 ,3 ,3,  4,4,4 ,4 ,4,  5,5,5,5,5,5 ,5 ,5 ,5 ,5 , 6,6,6,6 ,6 ,6  ,7,7,7,7,7,7 ,7 ,7 ,7 ,7 , 8,8,8 ,8 ,8 , 9,9,9,9,9 ,9 ,9 ,9 , 10,10,10,10 , 11,11,11,11,11,11};
 
-    public MapGameJoiner(TileFactory tileFactory, VertexFactory vertexFactory, RoadFactory roadFactory) {
+    public MapGameJoiner(TileFactory tileFactory, VertexFactory vertexFactory, RoadFactory roadFactory, DicesFactory dicesFactory) {
         this.tileFactory = tileFactory;
         this.vertexFactory = vertexFactory;
         this.roadFactory = roadFactory;
+        this.dicesFactory = dicesFactory;
     }
 
     @Override
     public void joinGame(Player owner, Game game) {
+        dicesFactory.buildDices(game);
+
         //treure map, fer un for aqui q generi tantes tiles com necessiti, aqui portar la llogica dels tipus de tiles weights etc
         for(int i = 0; i < MAX_TILES; i++){
             tileFactory.buildTile(game, owner, types[i], weights[i], rowLocations[i], columnLocations[i]);

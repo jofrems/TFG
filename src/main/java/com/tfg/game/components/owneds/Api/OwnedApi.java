@@ -1,6 +1,7 @@
 package com.tfg.game.components.owneds.Api;
 
 
+import com.tfg.game.components.dices.DicesController;
 import com.tfg.game.components.elements.ElementsController;
 import com.tfg.game.components.owneds.OwnedsController;
 import com.tfg.game.components.partnerships.PartnershipController;
@@ -23,9 +24,10 @@ public class OwnedApi {
     private final UpgradedsController upgradedsController;
     private final PartnershipController partnershipController;
     private final ElementsController elementsController;
+    private final DicesController dicesController;
     private final GamesApi gamesApi;
 
-    public OwnedApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, PartnershipController partnershipController, ElementsController elementsController, GamesApi gamesApi) {
+    public OwnedApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, PartnershipController partnershipController, ElementsController elementsController, DicesController dicesController, GamesApi gamesApi) {
         this.ownedsController = ownedsController;
         this.playersController = playersController;
         this.resourcesController = resourcesController;
@@ -33,6 +35,7 @@ public class OwnedApi {
         this.upgradedsController = upgradedsController;
         this.partnershipController = partnershipController;
         this.elementsController = elementsController;
+        this.dicesController = dicesController;
         this.gamesApi = gamesApi;
     }
 
@@ -40,6 +43,8 @@ public class OwnedApi {
     public GameData Own(@PathVariable String entityId, @PathVariable String playerName, @RequestParam String token){
         var player = playersController.findPlayer(playerName).get();
         var ownedTest = ownedsController.own(entityId);
+
+        var dice = dicesController.test();
 
         var inventoryId = ownedsController.findAllByGameAndOwner(ownedTest.getGame(), player).stream()
                     .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();

@@ -64,7 +64,7 @@ export function RoadComponent({ entity }: any) {
 
     
     var xPos = xOffset+313;
-    var yPos = yOffset-270;
+    var yPos = yOffset+125;
     var entityId = entity.id;
 
     //generem un color pel jugador aleatoriament
@@ -83,11 +83,8 @@ export function RoadComponent({ entity }: any) {
         colour = "white"
     }
     
-   if(entity.column ===0)
-    console.log(entity.row);
     if(entity.column === 2 || entity.column === 6 || entity.column === 10){
         if(entity.row === 3 || entity.row === 7 || entity.row === 11 || entity.row === 15 || entity.row ===19){
-            console.log("im innnnn");
             return (
                 <g id="road">
                     <WestRoad id={entityId} x={xPos} y={yPos} width="80" height="20"  stroke={entity.owner != null ? "black" : "red"} strokeWidth={entity.owner != null ? 3 : 0  } fill={entity.owner != null ? colour : "white"} fillOpacity={entity.owner != null ? 1 : 0} onClick={owned}></WestRoad>
@@ -108,7 +105,6 @@ export function RoadComponent({ entity }: any) {
         }
     }else if(entity.column ===0 || entity.column ===4 || entity.column ===8){
         if(entity.row === 3 || entity.row === 7 || entity.row === 11 || entity.row === 15 || entity.row ===19){
-            console.log("im innnnn");
             return (
                 <g id="road">
                     <EastRoad id={entityId} x={xPos} y={yPos} width="80" height="20"  stroke={entity.owner != null ? "black" : "red"} strokeWidth={entity.owner != null ? 3 : 0  } fill={entity.owner != null ? colour : "white"} fillOpacity={entity.owner != null ? 1 : 0} onClick={owned}></EastRoad>

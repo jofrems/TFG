@@ -56,7 +56,7 @@ export function VertexComponent({ entity }: any) {
         yOffset = yOffset + 50;
     
     var xPos = xOffset + 290;
-    var yPos = yOffset -275;
+    var yPos = yOffset +115;
     var entityId = entity.id;
 
     //generem un color pel jugador aleatoriament

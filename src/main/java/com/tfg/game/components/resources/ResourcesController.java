@@ -60,4 +60,40 @@ public class ResourcesController {
         }
         return false;
     }
+
+    public void incOrDecBrick (String entityId, int amount, boolean increase) {
+        var component = resourcesRepository.findById(entityId).get();
+        component.incOrDecBrick(amount, increase);
+
+        resourcesRepository.save(component);
+    }
+
+    public void incOrDecLumber (String entityId, int amount, boolean increase) {
+        var component = resourcesRepository.findById(entityId).get();
+        component.incOrDecLumber(amount, increase);
+
+        resourcesRepository.save(component);
+    }
+
+    public void incOrDecWool (String entityId, int amount, boolean increase) {
+        var component = resourcesRepository.findById(entityId).get();
+        component.incOrDecWool(amount, increase);
+
+        resourcesRepository.save(component);
+    }
+
+    public void incOrDecGrain (String entityId, int amount, boolean increase) {
+        var component = resourcesRepository.findById(entityId).get();
+        component.incOrDecGrain(amount, increase);
+
+        resourcesRepository.save(component);
+    }
+
+    public void incOrDecOre (String entityId, int amount, boolean increase) {
+        var component = resourcesRepository.findById(entityId).get();
+        component.incOrDecOre(amount, increase);
+
+        resourcesRepository.save(component);
+    }
+
 }
