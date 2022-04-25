@@ -1,9 +1,12 @@
 import { roll } from "./actions";
-import { useDispatchForm } from "www/store/hooks";
+import { useAppSelector, useDispatchFormBig } from "www/store/hooks";
+import { getPlayerName } from "www/store/player/selectors";
 
 
 export function DicesComponent({ entity }: any) {
-  const rolls = useDispatchForm(roll, entity.id, "roll");
+  const currentPlayer = useAppSelector(getPlayerName);
+
+  const rolls = useDispatchFormBig(roll, entity.id, currentPlayer);
   if(entity.type !== 'dice') return null; 
 
   return <>

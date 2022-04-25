@@ -114,7 +114,21 @@ public class GamesApi {
     public GameData endRound(@PathVariable String gameName, @PathVariable String creatorName, @RequestParam String token) {
         var playingPlayer = playersController.findPlayerByToken(token).orElseThrow();
         var creatorPlayer = playersController.findPlayer(creatorName).orElseThrow();
-        gamesController.endRound(gameName, creatorPlayer);
+        var game = gamesController.findByCreatorAndGameName(creatorPlayer,gameName);
+        var isCurrentPlayerTurn = gamesController.isCurrentPlayerTurn(game, playingPlayer);
+
+        if(isCurrentPlayerTurn)
+            gamesController.endRound(gameName, creatorPlayer);
+
+        return get(gameName, creatorName, token);
+    }
+
+    @PostMapping("/{gameName}/by/{creatorName}/playerNameTurn")
+    public GameData playerNameTurn(@PathVariable String gameName, @PathVariable String creatorName, @RequestParam String token) {
+        var creatorPlayer = playersController.findPlayer(creatorName).orElseThrow();
+        var game = gamesController.findByCreatorAndGameName(creatorPlayer,gameName);
+
+        gamesController.getPlayerNameTurn(game);
 
         return get(gameName, creatorName, token);
     }

@@ -82,4 +82,20 @@ public class GamesController {
         return player.getPlayerName() + "#" + gameName;
     }
 
+    public boolean isCurrentPlayerTurn(Game game, Player player){
+        var players = game.getJoinedPlayers();
+        var index = players.indexOf(player);
+        if(index  == game.getTurn())
+            return true;
+        else
+            return false;
+    }
+
+    public Game findByCreatorAndGameName(Player creator, String gameName){
+        return this.gameRepository.findByCreatorAndGameName(creator, gameName);
+    }
+
+    public String getPlayerNameTurn(Game game){
+        return game.getPlayerNameTurn();
+    }
 }

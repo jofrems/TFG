@@ -18,12 +18,15 @@ public class Game {
 
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Player> joinedPlayers = new ArrayList<>();
-    private int roundNumber = 1;
+    private int roundNumber = 0;
+    private int turn = 0;
+    private String playerNameTurn;
 
     public Game(String id, String gameName, Player creator) {
         this.id = id;
         this.gameName = gameName;
         this.creator = creator;
+        this.playerNameTurn = creator.getPlayerName();
     }
 
     protected Game() {}
@@ -50,9 +53,20 @@ public class Game {
 
     public void endRound() {
         this.roundNumber += 1;
+        int max_players = getJoinedPlayers().size();
+        if(this.turn >= max_players-1)
+            this.turn = 0;
+        else
+            this.turn += 1;
+        this.playerNameTurn = joinedPlayers.get(this.turn).getPlayerName();
+    }
+
+    public String getPlayerNameTurn(){
+       return this.playerNameTurn;
     }
 
     public int getRoundNumber() {
         return this.roundNumber;
     }
+    public int getTurn(){ return this.turn;}
 }

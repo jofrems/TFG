@@ -8,6 +8,7 @@ export type GameState = null | {
   creatorName: string;
   roundNumber: number;
   playerName: string;
+  playerNameTurn: string;
   token: string;
   entities: {
     [id: string]: EntityState;

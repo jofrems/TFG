@@ -30,6 +30,12 @@ public class DicesController {
         return dices;
     }
 
+    public Dices getDices(String entityId){
+        var dices = dicesRepository.findById(entityId).get();
+
+        return dices;
+    }
+
     public int getDice1(String entityId){
         var dices = dicesRepository.findById(entityId).get();
         return dices.getDice1();

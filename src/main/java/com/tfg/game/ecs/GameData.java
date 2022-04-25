@@ -10,6 +10,7 @@ public class GameData {
     private String creatorName;
     private int roundNumber;
     private String playerName;
+    private String playerNameTurn;
     private String token;
     private Map<String, Map<String, Object>> entities = new TreeMap<>();
 
@@ -18,6 +19,7 @@ public class GameData {
         this.creatorName = game.getCreator().getPlayerName();
         this.roundNumber = game.getRoundNumber();
         this.playerName = playerName;
+        this.playerNameTurn = game.getPlayerNameTurn();
         this.token = token;
     }
 

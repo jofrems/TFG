@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface GameRepository extends JpaRepository<Game, String> {
     List<Game> findByCreator(Player creator);
+    Game findByCreatorAndGameName(Player creator, String gameName);
 }

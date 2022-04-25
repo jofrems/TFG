@@ -9,6 +9,7 @@ import com.tfg.game.components.owneds.OwnedsController;
 import com.tfg.game.components.resources.ResourcesController;
 import com.tfg.game.components.typeds.TypedsController;
 import com.tfg.game.ecs.GameData;
+import com.tfg.game.games.GamesController;
 import com.tfg.game.games.api.GamesApi;
 import com.tfg.game.players.PlayersController;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ public class DicesApi {
     private final TypedsController typedsController;
     private final NeighboursController neighboursController;
     private final OwnedsController ownedsController;
+    private final GamesController gamesController;
 
     private final GamesApi gamesApi;
 
@@ -34,99 +36,105 @@ public class DicesApi {
     public static final int BRICK = 3;
     public static final int ORE = 4;
 
-    public DicesApi(DicesController dicesController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, NeighboursController neighboursController, OwnedsController ownedsController, GamesApi gamesApi) {
+    public DicesApi(DicesController dicesController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, NeighboursController neighboursController, OwnedsController ownedsController, GamesController gamesController, GamesApi gamesApi) {
         this.dicesController = dicesController;
         this.playersController = playersController;
         this.resourcesController = resourcesController;
         this.typedsController = typedsController;
         this.neighboursController = neighboursController;
         this.ownedsController = ownedsController;
+        this.gamesController = gamesController;
 
         this.gamesApi = gamesApi;
     }
 
     @PostMapping("{entityId}/{playerName}/roll")
     public GameData Roll(@PathVariable String entityId, @PathVariable String playerName, @RequestParam String token){
-        var dices = dicesController.rollDices(entityId);
-
+        var dices = dicesController.getDices(entityId);
+        var player = playersController.findPlayer(playerName).get();
         var game = dices.getGame();
-        var diceSum = dices.getSumDices();
 
-        var neighbours = neighboursController.findAllByGame(game);
+        var isCurrentPlayerTurn = gamesController.isCurrentPlayerTurn(game, player);
+        if(isCurrentPlayerTurn) {
+            dices = dicesController.rollDices(entityId);
+            var diceSum = dices.getSumDices();
 
-        for(Neighbours n : neighbours){
-            Owned currentEntity = ownedsController.own(n.getEntityId());
-            if(currentEntity.getOwner() != null){
-                if(n.getNeighbourWeight() == diceSum){
-                    var inventoryId = ownedsController.findAllByGameAndOwner(game, currentEntity.getOwner()).stream()
-                            .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
+            var neighbours = neighboursController.findAllByGame(game);
 
-                   switch(n.getNeighbourType()) {
-                       case LUMBER:
-                           resourcesController.incOrDecLumber(inventoryId, 1, true);
-                           break;
-                       case WOOL:
-                           resourcesController.incOrDecWool(inventoryId, 1, true);
-                           break;
-                       case BRICK:
-                           resourcesController.incOrDecBrick(inventoryId, 1, true);
-                           break;
-                       case GRAIN:
-                           resourcesController.incOrDecGrain(inventoryId, 1, true);
-                           break;
-                       case ORE:
-                           resourcesController.incOrDecOre(inventoryId, 1, true);
-                           break;
-                       default:
-                           break;
-                   }
-                }
-                if(n.getNeighbour2Weight() == diceSum){
-                    var inventoryId = ownedsController.findAllByGameAndOwner(game, currentEntity.getOwner()).stream()
-                            .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
+            for (Neighbours n : neighbours) {
+                Owned currentEntity = ownedsController.own(n.getEntityId());
+                if (currentEntity.getOwner() != null) {
+                    if (n.getNeighbourWeight() == diceSum) {
+                        var inventoryId = ownedsController.findAllByGameAndOwner(game, currentEntity.getOwner()).stream()
+                                .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
 
-                    switch(n.getNeighbour2Type()) {
-                        case LUMBER:
-                            resourcesController.incOrDecLumber(inventoryId, 1, true);
-                            break;
-                        case WOOL:
-                            resourcesController.incOrDecWool(inventoryId, 1, true);
-                            break;
-                        case BRICK:
-                            resourcesController.incOrDecBrick(inventoryId, 1, true);
-                            break;
-                        case GRAIN:
-                            resourcesController.incOrDecGrain(inventoryId, 1, true);
-                            break;
-                        case ORE:
-                            resourcesController.incOrDecOre(inventoryId, 1, true);
-                            break;
-                        default:
-                            break;
+                        switch (n.getNeighbourType()) {
+                            case LUMBER:
+                                resourcesController.incOrDecLumber(inventoryId, 1, true);
+                                break;
+                            case WOOL:
+                                resourcesController.incOrDecWool(inventoryId, 1, true);
+                                break;
+                            case BRICK:
+                                resourcesController.incOrDecBrick(inventoryId, 1, true);
+                                break;
+                            case GRAIN:
+                                resourcesController.incOrDecGrain(inventoryId, 1, true);
+                                break;
+                            case ORE:
+                                resourcesController.incOrDecOre(inventoryId, 1, true);
+                                break;
+                            default:
+                                break;
+                        }
                     }
-                }
-                if(n.getNeighbour3Weight() == diceSum){
-                    var inventoryId = ownedsController.findAllByGameAndOwner(game, currentEntity.getOwner()).stream()
-                            .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
+                    if (n.getNeighbour2Weight() == diceSum) {
+                        var inventoryId = ownedsController.findAllByGameAndOwner(game, currentEntity.getOwner()).stream()
+                                .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
 
-                    switch(n.getNeighbour3Type()) {
-                        case LUMBER:
-                            resourcesController.incOrDecLumber(inventoryId, 1, true);
-                            break;
-                        case WOOL:
-                            resourcesController.incOrDecWool(inventoryId, 1, true);
-                            break;
-                        case BRICK:
-                            resourcesController.incOrDecBrick(inventoryId, 1, true);
-                            break;
-                        case GRAIN:
-                            resourcesController.incOrDecGrain(inventoryId, 1, true);
-                            break;
-                        case ORE:
-                            resourcesController.incOrDecOre(inventoryId, 1, true);
-                            break;
-                        default:
-                            break;
+                        switch (n.getNeighbour2Type()) {
+                            case LUMBER:
+                                resourcesController.incOrDecLumber(inventoryId, 1, true);
+                                break;
+                            case WOOL:
+                                resourcesController.incOrDecWool(inventoryId, 1, true);
+                                break;
+                            case BRICK:
+                                resourcesController.incOrDecBrick(inventoryId, 1, true);
+                                break;
+                            case GRAIN:
+                                resourcesController.incOrDecGrain(inventoryId, 1, true);
+                                break;
+                            case ORE:
+                                resourcesController.incOrDecOre(inventoryId, 1, true);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    if (n.getNeighbour3Weight() == diceSum) {
+                        var inventoryId = ownedsController.findAllByGameAndOwner(game, currentEntity.getOwner()).stream()
+                                .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
+
+                        switch (n.getNeighbour3Type()) {
+                            case LUMBER:
+                                resourcesController.incOrDecLumber(inventoryId, 1, true);
+                                break;
+                            case WOOL:
+                                resourcesController.incOrDecWool(inventoryId, 1, true);
+                                break;
+                            case BRICK:
+                                resourcesController.incOrDecBrick(inventoryId, 1, true);
+                                break;
+                            case GRAIN:
+                                resourcesController.incOrDecGrain(inventoryId, 1, true);
+                                break;
+                            case ORE:
+                                resourcesController.incOrDecOre(inventoryId, 1, true);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
             }
