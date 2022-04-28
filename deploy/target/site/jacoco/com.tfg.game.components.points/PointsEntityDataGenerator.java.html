@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PointsEntityDataGenerator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Card Game Exam</a> &gt; <a href="index.source.html" class="el_package">com.tfg.game.components.points</a> &gt; <span class="el_source">PointsEntityDataGenerator.java</span></div><h1>PointsEntityDataGenerator.java</h1><pre class="source lang-java linenums">package com.tfg.game.components.points;
+
+import com.tfg.game.ecs.EntityPublicDataGenerator;
+import com.tfg.game.ecs.GameData;
+import com.tfg.game.games.Game;
+import com.tfg.game.players.Player;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+
+@Component
+public class PointsEntityDataGenerator implements EntityPublicDataGenerator {
+    private final PointsRepository tileWeightRepository;
+
+<span class="fc" id="L15">    public PointsEntityDataGenerator(PointsRepository tileWeightRepository) {</span>
+<span class="fc" id="L16">        this.tileWeightRepository = tileWeightRepository;</span>
+<span class="fc" id="L17">    }</span>
+
+    @Override
+    public void generatePublicData(GameData data, Game game, Player playingPlayer, List&lt;String&gt; ownedEntityIds) {
+<span class="fc" id="L21">        generateTileWeightData(data, ownedEntityIds);</span>
+<span class="fc" id="L22">    }</span>
+
+    private void generateTileWeightData(GameData data, List&lt;String&gt; ownedEntityIds) {
+<span class="fc" id="L25">        var components = tileWeightRepository.findAllById(ownedEntityIds);</span>
+<span class="pc bpc" id="L26" title="1 of 2 branches missed.">        for (Points component : components) {</span>
+<span class="nc" id="L27">            var entityId = component.getEntityId();</span>
+<span class="nc" id="L28">            data.putEntityProperty(entityId, &quot;TileType&quot;, component.getType());</span>
+<span class="nc" id="L29">        }</span>
+<span class="fc" id="L30">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

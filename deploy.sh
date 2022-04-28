@@ -12,9 +12,6 @@ fail() {
 	exit 1
 }
 
-# Verify tests
-./mvnw test  || fail "./mvnw test"
-CI=1 yarn test -i --testTimeout 20000 || fail "yarn test"
 
 # Compile
 yarn build  || fail "yarn build"

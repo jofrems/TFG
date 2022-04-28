@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.tfg.game.Post_20220311_Vertex_Test
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.405 s - in com.tfg.game.Post_20220311_Vertex_Test
