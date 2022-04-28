@@ -10,6 +10,7 @@ public class GameResponse {
     private String creatorName;
     private String playerName;
     private String token;
+    private String playerNameTurn;
     private int roundNumber;
     private Map<String, EntityResponse> entities = new TreeMap<>();
 
@@ -18,6 +19,7 @@ public class GameResponse {
         this.creatorName = game.getCreator().getPlayerName();
         this.roundNumber = game.getRoundNumber();
         this.playerName = playerName;
+        this.playerNameTurn = game.getPlayerNameTurn();
         this.token = token;
     }
 
@@ -31,6 +33,10 @@ public class GameResponse {
 
     public String getPlayerName() {
         return this.playerName;
+    }
+
+    public String getPlayerNameTurn(){
+        return this.playerNameTurn;
     }
 
     public String getToken() {

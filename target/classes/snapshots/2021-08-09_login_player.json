@@ -14,7 +14,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"5679c766-17e6-4fe6-9927-d151811cb057\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"47589556-d50f-4fb5-a59a-f927d50e37e6\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     }
@@ -25,7 +25,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"57b73472-7560-4b3d-b593-8e35d8a9c277\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"1dbed708-5070-4e82-9daf-de7c28550469\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     },
@@ -34,7 +34,7 @@
       "url": "/api/v1/players/login",
       "requestBody": "{\n  \"password\": \"payforyourmeal12\",\n  \"playerName\": \"penny\"\n}",
       "responseStatus": 200,
-      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"35342d9f-06b7-4d82-b85f-1c14ba78f3c2\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
+      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"bd05a05e-7de8-4a0a-beef-07cb132ab8a7\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
       "resolvedException": "null"
     }
@@ -47,7 +47,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
-      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@67c72d83"
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@4f8e0aa4"
     },
     {
       "method": "POST",
@@ -56,7 +56,7 @@
       "responseStatus": 400,
       "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
       "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
-      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@24c2a4ce"
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@727a416"
     }
   ]
 }
