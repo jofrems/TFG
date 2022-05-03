@@ -11,6 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Dices extends EcsComponent{
     private int dice1;
     private int dice2;
+    private boolean isRolled;
 
     static final int MIN = 1;
     static final int MAX = 6;
@@ -19,6 +20,7 @@ public class Dices extends EcsComponent{
         super(entityId, game);
         this.dice1 = 0;
         this.dice2 = 0;
+        this.isRolled = false;
     }
 
     protected Dices(){}
@@ -27,6 +29,12 @@ public class Dices extends EcsComponent{
 
     public int getDice2(){
         return this.dice2;
+    }
+
+    public boolean isRolled(){return this.isRolled;}
+
+    public void updateIsRolled(boolean value){
+        this.isRolled = value;
     }
 
 

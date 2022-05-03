@@ -2,6 +2,7 @@ package com.tfg.game.games.api;
 
 import com.tfg.game.common.api.GlobalRestException;
 import com.tfg.game.common.api.SuccessResponse;
+import com.tfg.game.components.dices.DicesController;
 import com.tfg.game.ecs.GameData;
 import com.tfg.game.ecs.GameDataGenerator;
 import com.tfg.game.games.GamesController;
@@ -17,12 +18,14 @@ public class GamesApi {
     private final PlayersController playersController;
     private final PlayersApi playersApi;
     private final GameDataGenerator gameDataGenerator;
+    private final DicesController dicesController;
 
-    public GamesApi(GamesController gamesController, PlayersController playersController, PlayersApi playersApi, GameDataGenerator gameDataGenerator) {
+    public GamesApi(GamesController gamesController, PlayersController playersController, PlayersApi playersApi, GameDataGenerator gameDataGenerator, DicesController dicesController) {
         this.gamesController = gamesController;
         this.playersController = playersController;
         this.playersApi = playersApi;
         this.gameDataGenerator = gameDataGenerator;
+        this.dicesController = dicesController;
     }
 
     @PostMapping
@@ -117,8 +120,10 @@ public class GamesApi {
         var game = gamesController.findByCreatorAndGameName(creatorPlayer,gameName);
         var isCurrentPlayerTurn = gamesController.isCurrentPlayerTurn(game, playingPlayer);
 
-        if(isCurrentPlayerTurn)
+        if(isCurrentPlayerTurn) {
             gamesController.endRound(gameName, creatorPlayer);
+            dicesController.updateIsRolled(game,false);
+        }
 
         return get(gameName, creatorName, token);
     }

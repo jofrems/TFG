@@ -55,7 +55,7 @@ public class DicesApi {
         var game = dices.getGame();
 
         var isCurrentPlayerTurn = gamesController.isCurrentPlayerTurn(game, player);
-        if(isCurrentPlayerTurn) {
+        if(isCurrentPlayerTurn && !dices.isRolled()) {
             dices = dicesController.rollDices(entityId);
             var diceSum = dices.getSumDices();
 

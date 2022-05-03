@@ -3,7 +3,7 @@ import { getPlayerName } from "www/store/player/selectors";
 
 export function ResourcesComponent({ entity }: any) {
   const currentPlayer = useAppSelector(getPlayerName);
-  if(entity.owner !== currentPlayer) return null;
+  if(entity.owner !== currentPlayer || entity.type !== 'inventory') return null;
   return <>
         <div> Resources: </div>
         <div>&emsp;Lumber: {entity.lumber} 🪵</div>

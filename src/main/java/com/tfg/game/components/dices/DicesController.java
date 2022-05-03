@@ -25,9 +25,17 @@ public class DicesController {
         var dices = dicesRepository.findById(entityId).get();
 
         dices.rollDices();
+        dices.updateIsRolled(true);
         dicesRepository.save(dices);
 
         return dices;
+    }
+
+    public void updateIsRolled(Game game, boolean value){
+        var dices = dicesRepository.findAllByGame(game).get(0);
+
+        dices.updateIsRolled(value);
+        dicesRepository.save(dices);
     }
 
     public Dices getDices(String entityId){

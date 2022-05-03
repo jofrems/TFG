@@ -10,22 +10,22 @@ import java.util.List;
 
 @Component
 public class PointsEntityDataGenerator implements EntityPublicDataGenerator {
-    private final PointsRepository tileWeightRepository;
+    private final PointsRepository pointsRepository;
 
-    public PointsEntityDataGenerator(PointsRepository tileWeightRepository) {
-        this.tileWeightRepository = tileWeightRepository;
+    public PointsEntityDataGenerator(PointsRepository pointsRepository) {
+        this.pointsRepository = pointsRepository;
     }
 
     @Override
     public void generatePublicData(GameData data, Game game, Player playingPlayer, List<String> ownedEntityIds) {
-        generateTileWeightData(data, ownedEntityIds);
+        generatePointsData(data, ownedEntityIds);
     }
 
-    private void generateTileWeightData(GameData data, List<String> ownedEntityIds) {
-        var components = tileWeightRepository.findAllById(ownedEntityIds);
+    private void generatePointsData(GameData data, List<String> ownedEntityIds) {
+        var components = pointsRepository.findAllById(ownedEntityIds);
         for (Points component : components) {
             var entityId = component.getEntityId();
-            data.putEntityProperty(entityId, "TileType", component.getType());
+            data.putEntityProperty(entityId, "points", component.getPoints());
         }
     }
 }

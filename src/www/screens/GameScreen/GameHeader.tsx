@@ -12,7 +12,7 @@ export function GameHeader() {
   const isGameScreen = useAppSelector(getCurrentScreenName) === "game";
   const game = useAppSelector(getGame)!;
   const { gameName, creatorName, roundNumber, playerNameTurn} = game;
-
+  console.log("ronda: " + roundNumber+" ,torn: " + playerNameTurn);
   return (
     <Bar color="lightgray">
       {!isGameScreen && (

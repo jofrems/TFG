@@ -15,10 +15,20 @@ public class Points extends EcsComponent{
         this.points = 1;
     }
 
+    public Points(String entityId, Game game, int value){
+        super(entityId, game);
+
+        this.points = value;
+    }
+
     protected Points(){
     }
 
-    public int getType(){
+    public int getPoints(){
         return this.points;
+    }
+
+    public void updatePoints(int points){
+        this.points = points;
     }
 }

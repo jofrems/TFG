@@ -1,0 +1,3 @@
+name: David Rodenas Pico
+email: david.rodenas+github@gmail.com
+github: drpicox

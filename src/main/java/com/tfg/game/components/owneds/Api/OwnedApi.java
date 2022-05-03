@@ -5,6 +5,7 @@ import com.tfg.game.components.dices.DicesController;
 import com.tfg.game.components.elements.ElementsController;
 import com.tfg.game.components.owneds.OwnedsController;
 import com.tfg.game.components.partnerships.PartnershipController;
+import com.tfg.game.components.points.PointsController;
 import com.tfg.game.components.resources.ResourcesController;
 import com.tfg.game.components.typeds.TypedsController;
 import com.tfg.game.components.upgradeds.UpgradedsController;
@@ -27,10 +28,11 @@ public class OwnedApi {
     private final ElementsController elementsController;
     private final DicesController dicesController;
     private final GamesController gamesController;
+    private final PointsController pointsController;
 
     private final GamesApi gamesApi;
 
-    public OwnedApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, PartnershipController partnershipController, ElementsController elementsController, DicesController dicesController, GamesController gamesController, GamesApi gamesApi) {
+    public OwnedApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, PartnershipController partnershipController, ElementsController elementsController, DicesController dicesController, GamesController gamesController, PointsController pointsController, GamesApi gamesApi) {
         this.ownedsController = ownedsController;
         this.playersController = playersController;
         this.resourcesController = resourcesController;
@@ -40,6 +42,7 @@ public class OwnedApi {
         this.elementsController = elementsController;
         this.dicesController = dicesController;
         this.gamesController = gamesController;
+        this.pointsController = pointsController;
         this.gamesApi = gamesApi;
     }
 
@@ -54,6 +57,9 @@ public class OwnedApi {
         if(isCurrentPlayerTurn) {
             var inventoryId = ownedsController.findAllByGameAndOwner(ownedTest.getGame(), player).stream()
                     .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
+
+            var scoreId = ownedsController.findAllByGameAndOwner(ownedTest.getGame(), player).stream()
+                    .filter(c -> typedsController.isTyped(c.getEntityId(), "score")).findFirst().get().getEntityId();
 
             var isVertex = typedsController.isTyped(entityId, "vertex");
             var isOwned = ownedTest.getOwner() != null ? true : false;
@@ -114,6 +120,7 @@ public class OwnedApi {
                             (!isOwnedNeighbour1Vertex1 && !isOwnedNeighbour1Vertex2 && !isOwnedNeighbour2Vertex1 && !isOwnedNeighbour2Vertex2 && !isOwnedNeighbour3Vertex1 && !isOwnedNeighbour3Vertex2)) ||
                             (howManyVertexOwnedByPlayer < 2 && (!isOwnedNeighbour1Vertex1 && !isOwnedNeighbour1Vertex2 && !isOwnedNeighbour2Vertex1 && !isOwnedNeighbour2Vertex2 && !isOwnedNeighbour3Vertex1 && !isOwnedNeighbour3Vertex2))) {
                         resources = resourcesController.ownTown(inventoryId, true);
+                        pointsController.updatePoints(scoreId);
                     } else {
                         resources = resourcesController.ownTown(inventoryId, false);
                     }
@@ -125,6 +132,8 @@ public class OwnedApi {
                         resources = resourcesController.ownCity(inventoryId, false);
                     } else {
                         resources = resourcesController.ownCity(inventoryId, true);
+                        pointsController.updatePoints(scoreId);
+
                     }
                     elements = elementsController.ownCity(inventoryId, resources);
 

@@ -4,6 +4,7 @@ import com.tfg.game.components.neighbours.NeighboursController;
 import com.tfg.game.components.locateds.LocatedsController;
 import com.tfg.game.components.owneds.OwnedsController;
 import com.tfg.game.components.partnerships.PartnershipController;
+import com.tfg.game.components.points.PointsController;
 import com.tfg.game.components.tileType.TileTypeController;
 import com.tfg.game.components.tileWeight.TileWeightController;
 import com.tfg.game.components.typeds.TypedsController;
@@ -25,9 +26,10 @@ public class VertexFactory {
     private final NeighboursController neighboursController;
     private final PartnershipController partnershipController;
     private final UpgradedsController upgradedsController;
+    private final PointsController pointsController;
 
 
-    public VertexFactory(EntityIdGenerator entityIdGenerator, TypedsController typedsController, OwnedsController ownedsController, TileWeightController tileWeightController, TileTypeController tileTypeController, LocatedsController positionController, NeighboursController neighboursController, PartnershipController partnershipController, UpgradedsController upgradedsController) {
+    public VertexFactory(EntityIdGenerator entityIdGenerator, TypedsController typedsController, OwnedsController ownedsController, TileWeightController tileWeightController, TileTypeController tileTypeController, LocatedsController positionController, NeighboursController neighboursController, PartnershipController partnershipController, UpgradedsController upgradedsController, PointsController pointsController) {
         this.entityIdGenerator = entityIdGenerator;
         this.typedsController = typedsController;
         this.ownedsController = ownedsController;
@@ -37,6 +39,7 @@ public class VertexFactory {
         this.neighboursController = neighboursController;
         this.partnershipController = partnershipController;
         this.upgradedsController = upgradedsController;
+        this.pointsController = pointsController;
     }
 
     public void buildVertex(Game game, Player owner, int x, int y, int nWeight, int nType, int nWeight2, int nType2,int nWeight3,int nType3) {
@@ -47,5 +50,6 @@ public class VertexFactory {
         neighboursController.create(entityId, game, nWeight,nType, nWeight2,nType2, nWeight3, nType3);
         partnershipController.createEmpty(entityId, game);
         upgradedsController.create(entityId, game);
+        pointsController.create(entityId,game);
     }
 }

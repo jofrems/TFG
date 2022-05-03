@@ -6,6 +6,7 @@ import { EntityList } from "../EntityScreen/EntityList";
 import { GameHeader } from "./GameHeader";
 import { HexGeneratorComponent } from "./HexGeneratorComponent";
 import { DiceComponent} from "./DiceComponent";
+import { ScoreComponent} from "./ScoreComponent";
 
 
 export function GameScreen() {
@@ -21,6 +22,7 @@ export function GameScreen() {
         <h1>Catan</h1>
         <HexGeneratorComponent entities={entities}/>
         <DiceComponent entities={entities}/>
+        <ScoreComponent entities = {entities}/>
         <div>
         <h4>Inventory:</h4>
           <EntityList entities={entities} />

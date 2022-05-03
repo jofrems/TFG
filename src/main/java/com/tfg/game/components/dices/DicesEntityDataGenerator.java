@@ -28,6 +28,8 @@ public class DicesEntityDataGenerator implements EntityPublicDataGenerator {
             var entityId = component.getEntityId();
             data.putEntityProperty(entityId, "dice1", component.getDice1());
             data.putEntityProperty(entityId, "dice2", component.getDice2());
+            data.putEntityProperty(entityId, "isRolled", component.isRolled());
+
         }
     }
 }
