@@ -18,54 +18,25 @@ public class ResourcesApi {
     private final PlayersController playersController;
     private final ResourcesController resourcesController;
     private final TypedsController typedsController;
-    private final UpgradedsController upgradedsController;
     private final GamesApi gamesApi;
 
-    public ResourcesApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, UpgradedsController upgradedsController, GamesApi gamesApi) {
+    public ResourcesApi(OwnedsController ownedsController, PlayersController playersController, ResourcesController resourcesController, TypedsController typedsController, GamesApi gamesApi) {
         this.ownedsController = ownedsController;
         this.playersController = playersController;
         this.resourcesController = resourcesController;
         this.typedsController = typedsController;
-        this.upgradedsController = upgradedsController;
         this.gamesApi = gamesApi;
     }
 
-    @PostMapping("{entityId}/{playerName}/resources")
-    public GameData Own(@PathVariable String entityId, @PathVariable String playerName, @RequestParam String token){
-        var player = playersController.findPlayer(playerName).get();
-        var ownedTest = ownedsController.own(entityId);
+    @PostMapping("{entityId}/trade")
+    public GameData Trade(@PathVariable String entityId, @RequestParam String token, @RequestBody TradeForm form){
+        //var player = playersController.findPlayer(playerName).get();
 
-        var inventoryId = ownedsController.findAllByGameAndOwner(ownedTest.getGame(), player).stream()
-                    .filter(c -> typedsController.isTyped(c.getEntityId(), "inventory")).findFirst().get().getEntityId();
+        //var trade = tradeController.getGame();
 
-        var isVertex = typedsController.isTyped(entityId,"vertex");
-        var isOwned = ownedTest.getOwner() != null ? true : false;
+        var resources = resourcesController.makeTrade(entityId, form.getGivenResources(), form.getGetResources());
 
-        boolean resources;
-        if(isVertex) {
-            if(!isOwned)
-                resources = resourcesController.ownTown(inventoryId, true);
-            else
-                resources = resourcesController.ownCity(inventoryId, true);
-        }
-        else
-            resources = resourcesController.ownRoad(inventoryId, true);
-
-        if(resources) {
-            if(isVertex && isOwned){
-                var upgraded = upgradedsController.upgrade(entityId, true);
-                var game = upgraded.getGame();
-                return gamesApi.get(game.getGameName(), game.getCreator().getPlayerName(), token);
-
-            }else{
-                var owned = ownedsController.own(entityId, player);
-                var game = owned.getGame();
-                return gamesApi.get(game.getGameName(), game.getCreator().getPlayerName(), token);
-            }
-        }
-
-        var owned = ownedsController.own(entityId);
-        var game = owned.getGame();
+        var game = resourcesController.getGame(entityId);
 
         return gamesApi.get(game.getGameName(), game.getCreator().getPlayerName(), token);
     }

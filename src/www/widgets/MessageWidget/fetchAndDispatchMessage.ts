@@ -20,3 +20,4 @@ export async function fetchAndDispatchMessage(
 
   return body;
 }
+

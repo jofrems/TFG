@@ -23,7 +23,7 @@ export const useDispatchForm = (
 
 export const useDispatchFormBig = (
   actionCreator: Function,
-  ...refs: (string | undefined)[]
+  ...refs: (string | undefined | MutableRefObject<null | HTMLInputElement>)[]
 ) => {
   var dispatch = useAppDispatch();
   return useCallback(() => {

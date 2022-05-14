@@ -61,6 +61,42 @@ public class ResourcesController {
         return false;
     }
 
+    public boolean makeTrade(String entityId, String givenResources, String getResources){
+        var component = resourcesRepository.findById(entityId).get();
+
+        var lumbers = component.getLumber();
+        if(givenResources.equals("lumber") && component.getLumber() >= 4){
+            incOrDecLumber(entityId, 4, false);
+        }else if(givenResources.equals("wool") && component.getWool() >= 4){
+            incOrDecWool(entityId, 4, false);
+        }else if(givenResources.equals("brick") && component.getBrick() >= 4){
+            incOrDecBrick(entityId, 4, false);
+        }else if(givenResources.equals("grain") && component.getGrain() >= 4){
+            incOrDecGrain(entityId, 4, false);
+        }else if(givenResources.equals("ore") && component.getOre() >= 4){
+            incOrDecOre(entityId, 4, false);
+        }else{
+            return false;
+        }
+        if(getResources.equals("lumber")){
+            incOrDecLumber(entityId, 1, true);
+        }else if(getResources.equals("wool")){
+            incOrDecWool(entityId, 1, true);
+        }else if(getResources.equals("brick")){
+            incOrDecBrick(entityId, 1, true);
+        }else if(getResources.equals("grain")){
+            incOrDecGrain(entityId, 1, true);
+        }else if(getResources.equals("ore")){
+            incOrDecOre(entityId, 1, true);
+        }
+
+        return true;
+    }
+    public Game getGame(String entityId){
+        var component = resourcesRepository.findById(entityId).get();
+
+        return component.getGame();
+    }
     public void incOrDecBrick (String entityId, int amount, boolean increase) {
         var component = resourcesRepository.findById(entityId).get();
         component.incOrDecBrick(amount, increase);
