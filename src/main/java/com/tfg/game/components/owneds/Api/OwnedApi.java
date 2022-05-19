@@ -132,7 +132,8 @@ public class OwnedApi {
                         resources = resourcesController.ownCity(inventoryId, false);
                     } else {
                         resources = resourcesController.ownCity(inventoryId, true);
-                        pointsController.updatePoints(scoreId);
+                        if(resources)
+                            pointsController.updatePoints(scoreId);
 
                     }
                     elements = elementsController.ownCity(inventoryId, resources);
