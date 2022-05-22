@@ -8,6 +8,9 @@ import { HexGeneratorComponent } from "./HexGeneratorComponent";
 import { DiceComponent} from "./DiceComponent";
 import { ScoreComponent} from "./ScoreComponent";
 
+import { Row, Col, Container} from 'react-bootstrap';
+
+
 
 export function GameScreen() {
   const getAllGameEntities = useMemo(makeGetAllGameEntities, []);
@@ -20,13 +23,25 @@ export function GameScreen() {
       <GameHeader />
       <main>
         <h1>Catan</h1>
+        <Container>
+          <Row>
+            <Col style={{backgroundColor:'#85C1E9', borderRadius: 20}}>
+              <div style={{margin:10}}>
+                <h4>Inventory:</h4>
+                <EntityList entities={entities} />
+              </div>  
+            </Col>
+            <Col style={{backgroundColor:'#FAD7A0', borderRadius: 20}}  md= {{offset:1}}>
+              <div style={{margin:10}}>
+                <DiceComponent entities={entities}/>
+                <ScoreComponent entities = {entities}/>
+              </div>
+            </Col>
+          </Row>
+        </Container>
         <HexGeneratorComponent entities={entities}/>
-        <DiceComponent entities={entities}/>
-        <ScoreComponent entities = {entities}/>
-        <div>
-        <h4>Inventory:</h4>
-          <EntityList entities={entities} />
-        </div>
+        
+        
       </main>
     </>
   );

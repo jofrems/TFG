@@ -9,7 +9,7 @@ export function HeaderWidget() {
   return (
     <Bar>
       <LoadingWidget />
-      City Game!
+      Els Colonitzadors de l'Illa
       <Spacer />
       <LinkTo name="welcome">Welcome</LinkTo>
       <span>&nbsp;|&nbsp;</span>

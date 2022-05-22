@@ -27,9 +27,6 @@ export function TradeComponent({ entity }: any) {
               Give 4 Resource of type:
               <input type="string" ref={givenResourcesRef} />
             </label>
-          </div>
-        
-          <div>&emsp;
             <label>
               Get 1 Resource of type:
               <input type="string" ref={getResourcesRef} />

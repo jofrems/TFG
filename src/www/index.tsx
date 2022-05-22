@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import { App } from "./App";
 import reportWebVitals from "../reportWebVitals";
 import { createAppStore } from "./store";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const store = createAppStore();
 ReactDOM.render(
