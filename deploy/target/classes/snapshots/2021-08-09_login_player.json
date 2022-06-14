@@ -1,0 +1,62 @@
+{
+  "login-the-game": [
+    {
+      "method": "POST",
+      "url": "/api/v1/players",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The leonard player has been added successfully\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/players/login",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"5e2620ad-bd6e-4a17-93ee-785d4da8014b\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
+      "resolvedException": "null"
+    }
+  ],
+  "multiplayer": [
+    {
+      "method": "POST",
+      "url": "/api/v1/players/login",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"playerName\": \"leonard\",\n  \"token\": \"b341844c-a1d6-484c-a1b8-e57a6937cdab\",\n  \"message\": \"The leonard player has been logged successfully\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
+      "resolvedException": "null"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/players/login",
+      "requestBody": "{\n  \"password\": \"payforyourmeal12\",\n  \"playerName\": \"penny\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"playerName\": \"penny\",\n  \"token\": \"6decc50c-0bb9-4e45-86bd-b728d39672b1\",\n  \"message\": \"The penny player has been logged successfully\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
+      "resolvedException": "null"
+    }
+  ],
+  "checking-data": [
+    {
+      "method": "POST",
+      "url": "/api/v1/players/login",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"wrongplayer\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@1fe76ac8"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/players/login",
+      "requestBody": "{\n  \"password\": \"wrongpassword\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"The login credentials are wrong\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#login(LoginForm)",
+      "resolvedException": "The login credentials are wrong\njava.io.PrintWriter@5e6a3c7a"
+    }
+  ]
+}

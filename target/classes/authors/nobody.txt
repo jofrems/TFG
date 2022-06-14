@@ -1,4 +1,0 @@
-name: No Body
-email: nobody@example.com
-github: nobody
-github: noone

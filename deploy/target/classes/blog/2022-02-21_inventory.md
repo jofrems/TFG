@@ -1,6 +1,6 @@
 ---
-writer: drpicox
-coder: drpicox
+writer: jofrems
+coder: jofrems
 ---
 # Inventory
 

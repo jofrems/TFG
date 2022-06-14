@@ -1,0 +1,69 @@
+{
+  "entering-the-game": [
+    {
+      "method": "POST",
+      "url": "/api/v1/players",
+      "requestBody": "{\n  \"password\": \"tbbt12\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 200,
+      "responseBody": "{\n  \"status\": 200,\n  \"message\": \"The leonard player has been added successfully\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
+      "resolvedException": "null"
+    }
+  ],
+  "checking-data": [
+    {
+      "method": "POST",
+      "url": "/api/v1/players",
+      "requestBody": "{\n  \"password\": \"\",\n  \"playerName\": \"\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player name should be present\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
+      "resolvedException": "Player name should be present\njava.io.PrintWriter@4e413e45"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/players",
+      "requestBody": "{\n  \"password\": \"\",\n  \"playerName\": \"jo\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player name should be at least three characters long\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
+      "resolvedException": "Player name should be at least three characters long\njava.io.PrintWriter@73ce5f94"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/players",
+      "requestBody": "{\n  \"password\": \"\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Password should be present\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
+      "resolvedException": "Password should be present\njava.io.PrintWriter@5e0eee27"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/players",
+      "requestBody": "{\n  \"password\": \"short\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player password should be at least six characters long\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
+      "resolvedException": "Player password should be at least six characters long\njava.io.PrintWriter@20c03e76"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/players",
+      "requestBody": "{\n  \"password\": \"nonumbers\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player password should have at least one number\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
+      "resolvedException": "Player password should have at least one number\njava.io.PrintWriter@42e526b2"
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/players",
+      "requestBody": "{\n  \"password\": \"123456\",\n  \"playerName\": \"leonard\"\n}",
+      "responseStatus": 400,
+      "responseBody": "{\n  \"isError\": true,\n  \"message\": \"Player password should have at least one letter\"\n}",
+      "handler": "com.tfg.game.players.api.PlayersApi#signup(SignupForm)",
+      "resolvedException": "Player password should have at least one letter\njava.io.PrintWriter@5d83a948"
+    }
+  ]
+}

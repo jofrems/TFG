@@ -1,3 +1,0 @@
-name: Jofre Sant Muniesa
-email: jmuniesa@edu.tecnocampus.cat
-github: jofrems

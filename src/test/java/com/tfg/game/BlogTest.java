@@ -48,7 +48,7 @@ public class BlogTest {
 
         var json = new JsonOld(result.getResponse().getContentAsString());
         assertThat(json).at("posts").containsMatch(new JsonOld("{" +
-                "\"id\": \"2021-08-08_welcome_player\"," +
+                "\"id\": \"2022-02-15_welcome_player\"," +
                 "\"title\": \"Welcome Player\"" +
                 "}"));
     }
@@ -70,12 +70,12 @@ public class BlogTest {
 
     @Test
     public void read_one_post_by_id() throws Throwable {
-        var result = mockMvc.perform(get("/api/v1/posts/2021-08-08_welcome_player"))
+        var result = mockMvc.perform(get("/api/v1/posts/2022-02-15_welcome_player"))
                 .andExpect(status().isOk())
                 .andReturn();
 
         var match = new JsonOld("{" +
-                "\"id\": \"2021-08-08_welcome_player\"," +
+                "\"id\": \"2022-02-15_welcome_player\"," +
                 "\"title\": \"Welcome Player\"" +
                 "}");
 

@@ -76,13 +76,16 @@
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/components/locateds/Located.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/games/api/JoinGameForm.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/players/api/LoginResponse.java
+/Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/entities/score/ScoreFactory.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/components/dices/Dices.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/Application.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/common/api/ResponseWithMessage.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/entities/road/RoadFactory.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/components/elements/Elements.java
+/Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/entities/score/ScoreGameJoiner.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/ecs/GameData.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/blog/IllegalAuthorFileFormatException.java
+/Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/components/resources/Api/TradeForm.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/components/points/PointsGameDataGenerator.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/games/GameJoiner.java
 /Users/jeff/Desktop/TFG/src/main/java/com/tfg/game/components/points/Points.java

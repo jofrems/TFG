@@ -35,6 +35,10 @@ export function GameScreen() {
               <div style={{margin:10}}>
                 <DiceComponent entities={entities}/>
                 <ScoreComponent entities = {entities}/>
+                <h4>Cost Table:</h4>
+                <p>&emsp;Road: 🧱🪵</p>
+                <p>&emsp;Town: 🧱🪵🐑🌾</p>
+                <p>&emsp;City: 🪨🪨🪨🌾🌾</p>
               </div>
             </Col>
           </Row>
