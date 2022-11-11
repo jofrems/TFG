@@ -4,9 +4,9 @@ To my online web game
 
 Methodology: TDD with natural language
 
-Backend developed with Java (spring)
-Frontend developed with Javascript (React & Redux)
-Api-Rest to communicate back and front
+- Backend developed with Java (spring)
+- Frontend developed with Javascript (React & Redux)
+- Api-Rest to communicate back and front
 
 
 Deploy path:
